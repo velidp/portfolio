@@ -23,7 +23,7 @@ const Skills = () => {
       setSkills(data);
     });
 
-  }, [])
+  }, []);
 
   return (
     <>
@@ -95,6 +95,3 @@ export default AppWrap(
   'skills',
   'app__whitebg'
 );
-
-
-// export default AppWrap(Skills, 'skills');
