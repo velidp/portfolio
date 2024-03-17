@@ -71,8 +71,8 @@
     }
   }
   
-  .p-text {
-    font-size: 0.8rem;
+  .text-common {
+    font-size: 1rem;
     text-align: left;
     color: var(--gray-color);
     line-height: 1.5;
@@ -81,6 +81,16 @@
       font-size: 1.75rem;
     }
   }
+  
+  .p-text {
+    @extend .text-common;
+  }
+  
+  .selam-text {
+    font-size: 1.5rem;
+    @extend .text-common;
+  }
+  
   
   .bold-text {
     font-size: 1rem;

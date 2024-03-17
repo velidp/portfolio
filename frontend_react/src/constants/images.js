@@ -35,7 +35,19 @@ import nb from '../assets/nb.png';
 import skype from '../assets/skype.png';
 import spotify from '../assets/spotify.png';
 
+
+///
+import angular from '../assets/angular.png';
+import spring from '../assets/spring.png';
+import postgresql from '../assets/postgresql.png';
+import java from '../assets/java.png';
+
 export default {
+  angular,
+  spring,
+  postgresql,
+  java,
+
   email,
   mobile,
   api,
