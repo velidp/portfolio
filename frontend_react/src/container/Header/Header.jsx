@@ -26,17 +26,13 @@ const Header = () => {
         className='app__header-info'
       >
         <div className='app__header-badge'>
-          <div className='badge-cmp app__flex'>
             <div>
               <p className='selam-text'>ٱلسَّلَامُ عَلَيْكُمْ</p>
-              <p className='p-text'>I am</p>
               <p className='p-text' style={{ visibility: 'hidden' }}>a</p>
-              <h1 className='head-text'>Velid Poško</h1>
+              <h1 className='name-text'>Velid Poško</h1>
               <p className='p-text' style={{ visibility: 'hidden' }}>a</p>
-              <p className='p-text'>Software Engineer</p>
-              <p className='p-text'>Bringing Digital Excellence</p>
+              <p className='p-text'>SOFTWARE ENGINEER</p>
             </div>
-          </div>
         </div>
       </motion.div>
 

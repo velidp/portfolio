@@ -1,14 +1,6 @@
 #home {
   position: relative;
 
-  /*
-  background: url("../../assets/background4.jfif");
-  background-size: cover;
-  background-position: center;
-  background-repeat: repeat;
-  */
-
-  // disable the default padding styles
   .app__wrapper {
     padding: 0;
 
@@ -19,12 +11,11 @@
 }
 
 .app__header {
-  flex: 1;
+  flex: 2;
   width: 100%;
-  height: 100%;
-  flex-direction: row;
-
-  padding: 6rem 2rem 0rem;
+ 
+  flex-direction: column;
+  padding: 6rem 2rem 0rem 5rem;
 
   @media screen and (min-width: 2000px) {
     padding-top: 8rem;
@@ -40,14 +31,11 @@
 }
 
 .app__header-info {
-  flex: 0.65;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  height: 100%;
-
-  margin: 0 2rem;
+  flex-direction: row;
+  width: 450px;
+  margin-left: auto;
+  margin-top: auto;
 
   @media screen and (max-width: 1200px) {
     width: 100%;
@@ -57,37 +45,10 @@
 
 .app__header-badge {
   width: 100%;
-
-//  display: flex;
-
-  
-  // justify-content: flex-end;
- align-items: flex-start;
- /*
-  flex-direction: column;
-  */
-
-  .badge-cmp,
-  .tag-cmp {
-    padding: 1rem 2rem;
-    background: var(--white-color);
-    border-radius: 15px;
-  //  flex-direction: row;
-  //  width: auto;
-
-    box-shadow: 0px 0px 20px rgb(46, 46, 46);
-  }
-
-  .tag-cmp {
-    flex-direction: column;
-    margin-top: 3rem;
-
-    p {
-      width: 100%;
-      text-transform: uppercase;
-      text-align: right;
-    }
-  }
+  padding: 1rem 2rem;
+  background: var(--white-color);
+  border-radius: 15px;
+  box-shadow: 0px 0px 20px rgb(46, 46, 46);
 
   span {
     font-size: 2.5rem;
@@ -103,20 +64,41 @@
   }
 }
 
+
+.name-text {
+  font-size: 2.75rem;
+  font-weight: 800;
+  text-align: left;
+  color: var(--black-color);
+  text-transform: capitalize;
+
+  span {
+    color: var(--secondary-color);
+  }
+
+  @media screen and (min-width: 2000px) {
+    font-size: 4rem;
+  }
+
+  @media screen and (max-width: 450px) {
+    font-size: 2rem;
+  }
+}
+
 .app__header-circles {
-  flex: 0.3;
+  flex: 0.15;
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
-  align-items: flex-end;
-  height: 100%;
-  margin-bottom: 7.5rem;
+  margin-left: auto;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  margin-right: 10px;
 
   div {
     width: 100px;
     height: 100px;
     border-radius: 50%;
-
+    margin-left: 20px;
     background: var(--white-color);
     box-shadow: 0px 0px 20px rgb(46, 46, 46);
 
@@ -126,7 +108,6 @@
     }
   }
 
-  // circles with different height & width
 
   div {
     width: 70px;
