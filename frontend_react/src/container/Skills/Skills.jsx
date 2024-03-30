@@ -49,15 +49,16 @@ const Skills = () => {
             </motion.div>
           ))}
         </motion.div>
+
+
         <div className="app__skills-exp">
           {experiences.map((experience) => (
             <motion.div
               className="app__skills-exp-item"
               key={experience.year}
             >
-              <div className="app__skills-exp-year">
-                <p className="bold-text">{experience.year}</p>
-              </div>
+              
+
               <motion.div className="app__skills-exp-works">
                 {experience.works.map((work) => (
                   <>
@@ -68,7 +69,7 @@ const Skills = () => {
                       data-tooltip-id={work.name}
                       key={work.name}
                     >
-                      <h4 className="bold-text">{work.name}</h4>
+                      <h3 className="work-name-text">{work.name}</h3>
                       <p className="p-text">{work.company}</p>
                     </motion.div>
                     <Tooltip
@@ -79,12 +80,18 @@ const Skills = () => {
                     >
                       {work.desc}
                     </Tooltip>
+
+                    <div className="app__skills-exp-year">
+                      <p className="bold-text">{experience.year}</p>
+                    </div>
+
                   </>
                 ))}
               </motion.div>
             </motion.div>
           ))}
         </div>
+
       </div>
     </>
   );
