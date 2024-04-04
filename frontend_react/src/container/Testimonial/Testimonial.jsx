@@ -13,7 +13,11 @@ const Testimonial = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const handleClick = (index) => {
-    setCurrentIndex(index);
+    if(index < testimonials.length) {
+      setCurrentIndex(index);
+    } else {
+      setCurrentIndex(0);
+    }
   }
 
   useEffect(() => {
@@ -39,10 +43,10 @@ const Testimonial = () => {
           <div className='app__testimonial-item app__flex'>
             <img src={ urlFor(tstm.imageurl) } alt='testimonial'/>
             <div className='app__testimonial-content'>
-              <p className='p-text'>{tstm.feedback}</p>
+              <p className='p-text'>{ tstm.feedback }</p>
               <div>
-                <h4 className='bold-text'>{tstm.name}</h4>
-                <h5 className='p-text'>{tstm.company}</h5>
+                <h4 className='bold-text'>{ tstm.name }</h4>
+                <h5 className='p-text'>{ tstm.company }</h5>
               </div>
             </div>
           </div>
@@ -51,7 +55,7 @@ const Testimonial = () => {
             <div className='app__flex' onClick={() => handleClick(currentIndex === 0 ? testimonials.length - 1 : currentIndex - 1)}> 
               <HiChevronLeft/>
             </div>
-            <div className='app__flex' onClick={() => handleClick(currentIndex === 0 ? 0 : currentIndex + 1)}> 
+            <div className='app__flex' onClick={() => handleClick(currentIndex + 1)}> 
               <HiChevronRight/>
             </div>
           </div>

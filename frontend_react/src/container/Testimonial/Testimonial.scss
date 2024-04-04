@@ -13,6 +13,7 @@
     padding: 2rem;
     border-radius: 15px;
     box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+    margin-left: 7rem;
   
     transition: all 0.3s ease-in-out;
   
@@ -91,7 +92,7 @@
       height: 50px;
       border-radius: 50%;
       background-color: var(--white-color);
-  
+      cursor: pointer;
       margin: 1rem;
       transition: all 0.3s ease-in-out;
   
@@ -122,39 +123,37 @@
   }
   
   .app__testimonial-brands {
-    width: 80%;
-    flex-wrap: wrap;
+    width: 65%;
     margin-top: 2rem;
-  
+    margin-right: 2rem;
+    display: flex;
+    flex-wrap: wrap; 
+
     div {
-      width: 150px;
-      margin: 1.5rem;
-  
-      img {
-        width: 100%;
-        height: auto;
-        object-fit: cover;
-        filter: grayscale(1);
-      }
-  
-      &:hover {
+        width: 150px;
+        margin: 1.5rem;
+
         img {
-          filter: grayscale(0);
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            filter: grayscale(1);
         }
-      }
-  
-      @media screen and (min-width: 2000px) {
-        width: 210px;
-        margin: 2rem;
-      }
-  
-      @media screen and (max-width: 450px) {
-        width: 120px;
-        margin: 1rem;
-      }
+
+        &:hover {
+            img {
+                filter: grayscale(0);
+            }
+        }
+
+        @media screen and (min-width: 2000px) {
+            width: 210px;
+            margin: 2rem;
+        }
+
+        @media screen and (max-width: 450px) {
+            width: 120px;
+            margin: 1rem;
+        }
     }
-  
-    @media screen and (max-width: 800px) {
-      width: 100%;
-    }
-  }
+}
