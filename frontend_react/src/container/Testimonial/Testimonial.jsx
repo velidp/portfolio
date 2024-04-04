@@ -37,9 +37,9 @@ const Testimonial = () => {
   const tstm = testimonials[currentIndex];
 
   return (
-    <>
+    <div className='app__testimonial-container'>
       {testimonials.length && (
-        <>
+        <div className='app__testimonial-wrapper'>
           <div className='app__testimonial-item app__flex'>
             <img src={ urlFor(tstm.imageurl) } alt='testimonial'/>
             <div className='app__testimonial-content'>
@@ -59,26 +59,28 @@ const Testimonial = () => {
               <HiChevronRight/>
             </div>
           </div>
-        </>
+        </div>
       )}
 
-      <div className='app__testimonial-brands app__felx'>
-        {brands.map((brand) => 
-          <motion.div
-            whileInView={{ opacity: [0, 1] }}
-            transition={{ duration: 0.5, type: 'tween' }}
-            key={brand._id}
-          >
-            <img src={urlFor(brand.imgUrl)} alt={brand.name}/>
-          </motion.div>
-        )}
+      <div className='app__testimonial-brands-wrapper'>
+        <div className='app__testimonial-brands app__felx'>
+          {brands.map((brand) => 
+            <motion.div
+              whileInView={{ opacity: [0, 1] }}
+              transition={{ duration: 0.5, type: 'tween' }}
+              key={brand._id}
+            >
+              <img src={urlFor(brand.imgUrl)} alt={brand.name}/>
+            </motion.div>
+          )}
+        </div>
       </div>
-    </>
+    </div>
   )
 }
 
 export default AppWrap(
-  MotionWrap(Testimonial, 'app__testimonials'), 
+  MotionWrap(Testimonial, 'app__testimonial'), 
   'testimonial',
   'app__primarybg'
 );
