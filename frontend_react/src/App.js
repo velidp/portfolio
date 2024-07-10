@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { About, Footer, Header, Skills, Testimonial, Work } from './container'; 
+import { About, Footer, Header, Skills, Testimonial, Work, Intro } from './container'; 
 import { Navbar } from './components';
 import './App.scss';
 import VideoBackground from './components/VideoBackground';
@@ -10,6 +10,7 @@ const App = () => {
     <div className='app'>
       <Navbar/>
       <VideoBackground/>
+      <Intro/>
       <About/>
       <Work/>
       <Skills/>
