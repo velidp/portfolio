@@ -13,14 +13,16 @@ const VideoBackground = () => {
       mute: 1,
       loop: 1,
       playlist: "HIvqw74pCFc",
-      controls: 0, 
+      controls: 0
     },
   };
 
   return (
     <div className="video-background">
       <div className="video">
-        <YouTube videoId={"HIvqw74pCFc"} opts={opts} className="video-iframe" />
+        <div className="video-container">
+          <YouTube videoId={"HIvqw74pCFc"} opts={opts} className="video-iframe" />
+        </div>
         <div className="overlay"></div>
         <div className="header-container">
           <Header/>
