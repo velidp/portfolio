@@ -17,16 +17,9 @@
   flex-direction: column;
   padding: 6rem 2rem 0rem 5rem;
 
-  @media screen and (min-width: 2000px) {
-    padding-top: 8rem;
-  }
-
   @media screen and (max-width: 1200px) {
-    flex-direction: column;
-  }
-
-  @media screen and (max-width: 450px) {
-    padding: 6rem 1rem 2rem;
+     flex-direction: column;
+     padding: 6rem 1rem 2rem;
   }
 }
 
@@ -37,7 +30,7 @@
   margin-left: auto;
   margin-top: auto;
 
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 800px) {
     width: 100%;
     margin-right: 0rem;
   }
@@ -52,10 +45,6 @@
 
   span {
     font-size: 2.5rem;
-
-    @media screen and (min-width: 2000px) {
-      font-size: 5rem;
-    }
   }
 
   @media screen and (max-width: 1200px) {
@@ -76,11 +65,8 @@
     color: var(--secondary-color);
   }
 
-  @media screen and (min-width: 2000px) {
-    font-size: 4rem;
-  }
 
-  @media screen and (max-width: 450px) {
+  @media screen and (max-width: 1200px) {
     font-size: 2rem;
   }
 }
@@ -89,8 +75,8 @@
   flex: 0.15;
   display: flex;
   flex-direction: row;
-  margin-left: auto;
-  margin-top: 2rem;
+  justify-content: center; 
+  margin: 2rem auto; 
   margin-bottom: 2rem;
   margin-right: 10px;
 
@@ -108,21 +94,13 @@
     }
   }
 
-
   div {
     width: 70px;
     height: 70px;
   }
 
 
-  @media screen and (min-width: 2000px) {
-    div {
-      width: 100px;
-      height: 100px;
-    }
-  }
-
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 800px) {
     width: 100%;
     flex-direction: row;
     flex-wrap: wrap;
@@ -133,6 +111,7 @@
     }
   }
 }
+
 
 .app__header-img {
   flex: 1;
@@ -147,17 +126,6 @@
     width: 100%;
     object-fit: contain;
     z-index: 1;
-  }
-
-
-  .overlay_octagon {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 0;
-    width: 100%;
-    height: 90%;
   }
 
   @media screen and (max-width: 1200px) {
