@@ -53,7 +53,7 @@
       }
   
       &:hover {
-        box-shadow: 0 0 25px #fef4f5;
+        box-shadow: 0 0 25px red; // #fef4f5;
       }
   
       @media screen and (min-width: 2000px) {
@@ -89,6 +89,9 @@
     flex-direction: column;
   
     @media screen and (max-width: 900px) {
+      width: fit-content; 
+      margin: 0 auto; 
+      justify-content: center;
       margin-top: 2rem;
     }
   }
@@ -110,7 +113,7 @@
       flex-direction: column;
       justify-content: flex-start;
       align-items: flex-start;
-      margin-bottom: 1rem;
+      margin-bottom: 0.4rem;
       cursor: pointer;
   
       h4 {
@@ -126,7 +129,8 @@
   }
   
   .app__skills-exp-year {
-    margin-right: 3rem;
+    margin-right: 7rem;
+    margin-bottom: 1.7rem;
   
     p {
       font-weight: 800;
@@ -142,7 +146,7 @@
     max-width: 300px !important;
     background-color: var(--white-color) !important;
     box-shadow: 0 0 25px rgba(0, 0, 0, 0.1) !important;
-    border-radius: 5px !important;
+    border-radius: 9px !important;
     padding: 1rem !important;
     color: var(--gray-color) !important;
     text-align: center !important;
@@ -155,3 +159,20 @@
       line-height: 2 !important;
     }
   }
+
+.work-name-text {
+    font-size: 1.34rem;
+    font-weight: 350;
+    color: var(--black-color);
+    text-align: left;
+    letter-spacing: 0.25px;
+  
+    @media screen and (min-width: 2000px) {
+      font-size: 2rem;
+    }
+  
+    @media screen and (max-width: 450px) {
+      font-size: 1.1rem;
+    }
+    
+}

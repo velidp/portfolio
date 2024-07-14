@@ -1,8 +1,17 @@
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
 
 :root {
-  --font-base: "DM Sans", sans-serif;
+  --font-base: "Roboto", sans-serif;
 
+  --primary-color: #2b2b2b;
+  --secondary-color: #3d5a80;
+  --black-color: #D3D3D3;
+  --lightGray-color: #070707;
+  --gray-color: white;
+  --brown-color: pink;
+  --white-color: #414141;
+
+  /*
   --primary-color: #edf2f8;
   --secondary-color: #313bac;
   --black-color: #030303;
@@ -10,6 +19,7 @@
   --gray-color: #6b7688;
   --brown-color: #46364a;
   --white-color: #ffffff;
+  */
 }
 
 * {

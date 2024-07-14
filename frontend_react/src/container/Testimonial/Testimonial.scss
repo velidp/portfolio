@@ -1,18 +1,20 @@
 .app__testimonial {
-    flex: 1;
-    width: 100%;
-    flex-direction: column;
-  }
-  
-  .app__testimonial-item {
-    width: 60%;
+  flex: 1;
+  width: 100%;
+  flex-direction: column;
+}
+
+
+.app__testimonial-item {
+    width: 95%;
     min-height: 320px;
     background-color: var(--white-color);
     display: flex;
     flex-direction: row;
     padding: 2rem;
-    border-radius: 15px;
+    border-radius: 9px;
     box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+
   
     transition: all 0.3s ease-in-out;
   
@@ -84,14 +86,14 @@
   
   .app__testimonial-btns {
     flex-direction: row;
-    margin-top: 1rem;
+    margin-right: 5%;
   
     div {
       width: 50px;
       height: 50px;
       border-radius: 50%;
       background-color: var(--white-color);
-  
+      cursor: pointer;
       margin: 1rem;
       transition: all 0.3s ease-in-out;
   
@@ -122,39 +124,74 @@
   }
   
   .app__testimonial-brands {
-    width: 80%;
-    flex-wrap: wrap;
-    margin-top: 2rem;
-  
+    width: 100%;
+    
+    display: flex;
+    flex-wrap: wrap; 
+
     div {
-      width: 150px;
-      margin: 1.5rem;
-  
-      img {
-        width: 100%;
-        height: auto;
-        object-fit: cover;
-        filter: grayscale(1);
-      }
-  
-      &:hover {
+        width: 150px;
+        margin: 1.5rem;
+
         img {
-          filter: grayscale(0);
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            filter: grayscale(1);
         }
-      }
-  
-      @media screen and (min-width: 2000px) {
-        width: 210px;
-        margin: 2rem;
-      }
-  
-      @media screen and (max-width: 450px) {
-        width: 120px;
-        margin: 1rem;
-      }
+
+        &:hover {
+            img {
+                filter: grayscale(0);
+            }
+        }
+
+        @media screen and (min-width: 2000px) {
+            width: 210px;
+            margin: 2rem;
+        }
+
+        @media screen and (max-width: 450px) {
+            width: 120px;
+            margin: 1rem;
+            
+        }
     }
-  
-    @media screen and (max-width: 800px) {
+
+
+    @media screen and (max-width: 1100px) {
       width: 100%;
-    }
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
   }
+}
+
+.app__testimonial-container {
+  margin-left: 11rem;
+  margin-right: 11rem;
+  display: flex;
+  flex-wrap: wrap; 
+  align-items: center;
+
+  @media screen and (max-width: 1100px)  {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+.app__testimonial-wrapper {
+  width: 65%;
+
+  @media screen and (max-width: 1100px) {
+    width: 100%;
+  }
+}
+
+.app__testimonial-brands-wrapper {
+  width: 35%;
+
+  @media screen and (max-width: 1100px) {
+    width: 100%;
+  }
+}

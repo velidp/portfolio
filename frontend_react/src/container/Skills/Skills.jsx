@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Tooltip } from 'react-tooltip';
+import 'react-tooltip/dist/react-tooltip.css'
 
 import { AppWrap, MotionWrap } from '../../wrapper';
 import { urlFor, client } from '../../client';
@@ -27,7 +28,7 @@ const Skills = () => {
 
   return (
     <>
-      <h2 className="head-text">Skills & Experiences</h2>
+      <h2 className="head-text"><span>Skills</span> & Experiences</h2>
 
       <div className="app__skills-container">
         <motion.div className="app__skills-list">
@@ -48,15 +49,16 @@ const Skills = () => {
             </motion.div>
           ))}
         </motion.div>
+
+
         <div className="app__skills-exp">
           {experiences.map((experience) => (
             <motion.div
               className="app__skills-exp-item"
               key={experience.year}
             >
-              <div className="app__skills-exp-year">
-                <p className="bold-text">{experience.year}</p>
-              </div>
+              
+
               <motion.div className="app__skills-exp-works">
                 {experience.works.map((work) => (
                   <>
@@ -64,27 +66,32 @@ const Skills = () => {
                       whileInView={{ opacity: [0, 1] }}
                       transition={{ duration: 0.5 }}
                       className="app__skills-exp-work"
-                      data-tip
-                      data-for={work.name}
+                      data-tooltip-id={work.name}
                       key={work.name}
                     >
-                      <h4 className="bold-text">{work.name}</h4>
+                      <h3 className="work-name-text">{work.name}</h3>
                       <p className="p-text">{work.company}</p>
                     </motion.div>
-                  <Tooltip
-                    id={work.name}
-                    effect='solid'
-                    arrowColor='#fff'
-                    className='skills-tooltip'
-                  >
-                    {work.desc}
-                  </Tooltip>
+                    <Tooltip
+                      id={work.name}
+                      effect='solid'
+                      arrowColor='#fff'
+                      className='skills-tooltip'
+                    >
+                      {work.desc}
+                    </Tooltip>
+
+                    <div className="app__skills-exp-year">
+                      <p className="bold-text">{experience.year}</p>
+                    </div>
+
                   </>
                 ))}
               </motion.div>
             </motion.div>
           ))}
         </div>
+
       </div>
     </>
   );
