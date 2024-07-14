@@ -4,6 +4,7 @@
   height: 100vh;
   overflow: hidden;
   z-index: 0;
+  // border: 10px solid red;
 }
 
 .video {
@@ -11,6 +12,7 @@
   width: 100%;
   height: 100%;
   z-index: -1;
+  // border: 10px solid green;
 }
 
 .video-container {
@@ -21,6 +23,24 @@
   overflow: hidden;
 }
 
+/*
+.video-container {
+    width: 100%;
+    padding: 0 500px; 
+    height: 130%;
+    padding-bottom: 120.25%; 
+}
+*/
+
+@media screen and (max-aspect-ratio: 16/9) { 
+  .video-container {
+    min-width: 185vh;
+    min-height: calc(185vh * 9 / 16);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
 
 .video-iframe {
   position: absolute;
@@ -28,6 +48,7 @@
   left: 0;
   width: 100%;
   height: 100%;
+  // border: 10px solid blue;
 }
 
 .overlay {
@@ -38,6 +59,7 @@
   height: 100%;
   background: rgba(0, 0, 0, 0.45);
   z-index: 1;
+  // border: 2px solid rgba(0, 0, 0, 0.45);
 }
 
 .header-container {
@@ -46,4 +68,5 @@
   left: 0;
   width: 100%;
   z-index: 2;
+  // border: 10px solid purple;
 }
