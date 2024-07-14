@@ -3,12 +3,13 @@ import React from 'react';
 import { About, Footer, Header, Skills, Testimonial, Work } from './container'; 
 import { Navbar } from './components';
 import './App.scss';
+import VideoBackground from './components/VideoBackground';
 
 const App = () => { 
   return ( 
     <div className='app'>
       <Navbar/>
-      <Header/>
+      <VideoBackground/>
       <About/>
       <Work/>
       <Skills/>

@@ -6,10 +6,10 @@
     align-items: center;
   
     padding: 1rem 2rem;
-    background: rgba(255, 255, 255, 0.25);
-    // box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
+    background: rgba(71, 71, 71, 0.25);
+    box-shadow: 0 1px 15px 0 rgb(46, 46, 46);
+    backdrop-filter: grayscale(100%) blur(100px);
+    -webkit-backdrop-filter: grayscale(100%) blur(100px);
     border: 1px solid rgba(255, 255, 255, 0.18);
     position: fixed;
     z-index: 2;
@@ -22,7 +22,7 @@
   
     img {
       width: 90px;
-      height: 20px;
+      height: 50px;
   
       @media screen and (min-width: 2000px) {
         width: 180px;
@@ -116,10 +116,6 @@
       align-items: flex-end;
       flex-direction: column;
       
-      background: url('../../assets/bgWhite.png');
-      background-color: var(--white-color);
-      background-size: cover;
-      background-repeat: repeat;
   
       /* top box shadow */
       box-shadow: 0px 0px 20px rgba(168, 168, 168, 0.15);

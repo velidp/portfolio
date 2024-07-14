@@ -109,10 +109,12 @@
   
   .app__social {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
     flex-direction: column;
   
+   
+
     padding: 1rem;
   
     div {
@@ -128,6 +130,8 @@
       align-items: center;
   
       transition: all 0.3s ease-in-out;
+
+      cursor: pointer;
   
       svg {
         width: 15px;
