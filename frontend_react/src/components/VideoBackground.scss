@@ -9,7 +9,10 @@
 .video {
   position: relative;
   width: 100%;
-  height: 100%;
+  height: 100vh; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
   z-index: -1;
 }
 
@@ -21,6 +24,16 @@
   overflow: hidden;
 }
 
+
+@media screen and (max-aspect-ratio: 16/9) { 
+  .video-container {
+    min-width: 185vh;
+    min-height: calc(185vh * 9 / 16);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
 
 .video-iframe {
   position: absolute;
@@ -38,6 +51,7 @@
   height: 100%;
   background: rgba(0, 0, 0, 0.45);
   z-index: 1;
+  border: 2px solid rgba(0, 0, 0, 0.45);
 }
 
 .header-container {
