@@ -4,15 +4,16 @@
   height: 100vh;
   overflow: hidden;
   z-index: 0;
-  // border: 10px solid red;
 }
 
 .video {
   position: relative;
   width: 100%;
-  height: 100%;
+  height: 100vh; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
   z-index: -1;
-  // border: 10px solid green;
 }
 
 .video-container {
@@ -40,7 +41,6 @@
   left: 0;
   width: 100%;
   height: 100%;
-  // border: 10px solid blue;
 }
 
 .overlay {
@@ -51,7 +51,7 @@
   height: 100%;
   background: rgba(0, 0, 0, 0.45);
   z-index: 1;
-  // border: 2px solid rgba(0, 0, 0, 0.45);
+  border: 2px solid rgba(0, 0, 0, 0.45);
 }
 
 .header-container {
@@ -60,5 +60,4 @@
   left: 0;
   width: 100%;
   z-index: 2;
-  // border: 10px solid purple;
 }
