@@ -33,29 +33,27 @@ const Intro = () => {
   
 
     return (
-        <>
-            <div className='app__bio-container'>
-                <h2 className='head-text'>About <span>Me</span></h2>
-                {intro.length === 1 && (
-                    <div className='app__bio-content'>
-                        <div className='app__bio-image'>
-                            <img src={urlFor(intro[0].imageurl)} alt="VP" />
-                        </div>
-                        <div className='app__bio-text'>
-                            <p>{intro[0]?.bio}</p>
-                        </div>
+        <div className='app__bio-container'>
+            <h2 className='head-text'>About <span>Me</span></h2>
+            {intro.length === 1 && (
+                <div className='app__bio-content'>
+                    <div className='app__bio-image'>
+                        <img src={urlFor(intro[0].imageurl)} alt="VP" />
                     </div>
-                )}
-                <div className='button'>
-                    <button type='button' className='p-text' onClick={handleDownloadCV}>Download CV</button>
+                    <div className='app__bio-text'>
+                        <p>{intro[0]?.bio}</p>
+                    </div>
                 </div>
+            )}
+            <div className='button'>
+                <button type='button' className='p-text' onClick={handleDownloadCV}>Download CV</button>
             </div>
-        </>
+        </div>
     );
 };
 
 export default AppWrap(
     MotionWrap(Intro, 'app__intro'),
-    'intro',
-    'app__whitebg'
+    'about',
+    'app__primarybg'
 );
