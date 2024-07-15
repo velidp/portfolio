@@ -10,7 +10,7 @@ const Navbar = () => {
 
   return (
     <nav className='app__navbar'>
-      <div className='app__navbar-logo'>
+      <div className='app__navbar-logo' onClick={() => window.location.hash = '#home'}>
         <img src={images.logo} alt='logo'></img>
       </div>
       <ul className='app__navbar-links'>
@@ -46,4 +46,4 @@ const Navbar = () => {
   )
 }
 
-export default Navbar
+export default Navbar;
