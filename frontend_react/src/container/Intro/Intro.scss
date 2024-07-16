@@ -60,7 +60,7 @@
         cursor: pointer;
     
         &:hover {
-          background-color: #2430af;
+          background-color: var(--secondary-color);
         }
       }
   }

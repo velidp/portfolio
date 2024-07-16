@@ -3,13 +3,17 @@
 :root {
   --font-base: "Roboto", sans-serif;
 
-  --primary-color: #2b2b2b;
-  --secondary-color: #3d5a80;
-  --black-color: #D3D3D3;
-  --lightGray-color: #070707;
-  --gray-color: white;
-  --brown-color: pink;
-  --white-color: #414141;
+  --primary-color: #1c1c1c; /* Dark Blue */
+  --secondary-color: #f2e9e4; /* Darker Blue */
+
+  
+  --black-color: #0077be; /* Black */
+  --lightGray-color: #c9ada7; /* Dark Gray */
+
+  --gray-color: #F3F3F2; /* Dim Gray */
+  --brown-color: #CC9933; /* Dark Brown */
+  --white-color: #212529; /* White */
+  
 
   /*
   --primary-color: #edf2f8;
