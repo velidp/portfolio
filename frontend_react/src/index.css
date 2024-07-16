@@ -3,16 +3,24 @@
 :root {
   --font-base: "Roboto", sans-serif;
 
-  --primary-color: #1c1c1c; /* Dark Blue */
-  --secondary-color: #f2e9e4; /* Darker Blue */
 
-  
-  --black-color: #0077be; /* Black */
-  --lightGray-color: #c9ada7; /* Dark Gray */
 
-  --gray-color: #F3F3F2; /* Dim Gray */
-  --brown-color: #CC9933; /* Dark Brown */
-  --white-color: #212529; /* White */
+  --primary-color: #212A31;
+  --secondary-color: #2E3944; 
+  --black-color: #0077be; 
+  --lightGray-color: #748D92; 
+  --gray-color: #D3D9D4; 
+
+
+
+/*
+  --primary-color: #1c1c1c;
+  --secondary-color: #f2e9e4; 
+  --black-color: #0077be; 
+  --lightGray-color: #c9ada7; 
+  --gray-color: #F3F3F2; 
+  --brown-color: #CC9933; 
+  --white-color: #212529; 
   
 
   /*

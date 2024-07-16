@@ -1,5 +1,5 @@
 import React from 'react';
-import { BsTwitter, BsInstagram, BsLinkedin, BsGithub } from 'react-icons/bs';
+import { BsInstagram, BsLinkedin, BsGithub } from 'react-icons/bs';
 import { FaFacebook } from 'react-icons/fa';
 
 const SocalMedia = () => {

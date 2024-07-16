@@ -31,7 +31,7 @@ const Header = () => {
               <p className='p-text' style={{ visibility: 'hidden' }}>a</p>
               <h1 className='name-text'>Velid Poško</h1>
               <p className='p-text' style={{ visibility: 'hidden' }}>a</p>
-              <p className='p-text'>SOFTWARE ENGINEER</p>
+              <p className='profession-text'>SOFTWARE ENGINEER</p>
             </div>
         </div>
       </motion.div>

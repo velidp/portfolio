@@ -4,6 +4,10 @@
   flex-direction: column;
 }
 
+.button-text {
+  color: var(--gray-color);
+}
+
 .app__bio-container {
     display: flex;
     flex-direction: column;
@@ -12,6 +16,9 @@
   
     .head-text {
       margin-bottom: 2rem;
+      span {
+        color: var(--lightGray-color);
+      }
     }
   
     .app__bio-content {
@@ -40,7 +47,7 @@
       p {
         font-size: 1.2rem;
         line-height: 1.6;
-        color: var(--secondary-color);
+        color: var(--gray-color);
       }
     }
   
@@ -48,7 +55,7 @@
         padding: 1rem 2rem;
         border-radius: 9px;
         border: none;
-        background-color: var(--secondary-color);
+        background-color: var(--lightGray-color);
     
         font-weight: 500;
         color: var(--white-color);
@@ -60,7 +67,7 @@
         cursor: pointer;
     
         &:hover {
-          background-color: var(--secondary-color);
+          background-color: var(--black-color);
         }
       }
   }
