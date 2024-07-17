@@ -70,7 +70,7 @@ const Footer = () => {
         </div>   
         : 
         <div>
-          <h3 className='head-text'>Thank you for getting in touch!</h3>
+          <h3 className='head-text'><p className='thanks-text'>Thank you <span>for reaching out! I will answer you as soon as possible!</span> 😊</p></h3>
         </div> 
         }
       </div>

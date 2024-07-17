@@ -5,26 +5,13 @@
   
 
   
-  .app__whitebg {
-    background: linear-gradient(315deg, #111111 25%, #333333 100%);
-    }
-
-    .app__primarybg {
-        background: linear-gradient(315deg, #1A1A1A 20%, #111111 100%);
-    }
-
-
-  /*
-  .app__whitebg {
-    background: linear-gradient(135deg, #1A1A1A 25%, #333333 100%);
+.app__whitebg {
+  background: linear-gradient(315deg, #111111 25%, #333333 100%);
 }
 
 .app__primarybg {
-    background: linear-gradient(135deg, #333333 25%, #1A1A1A 100%);
+  background: linear-gradient(315deg, #1A1A1A 20%, #111111 100%);
 }
-*/
-  
-  
 
 
   .app__container {
@@ -63,7 +50,8 @@
   
     p {
       text-transform: uppercase;
-      color: var(--black-color);
+      color: var(--gray-color);
+      font-size: 0.75rem;
     }
   }
   

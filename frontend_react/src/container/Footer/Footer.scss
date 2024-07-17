@@ -7,6 +7,11 @@
       flex-direction: column;
     }
   }
+
+
+  .thanks-text {
+    font-size: 3rem;
+  }
   
   .app__footer-cards {
     width: 60%;
@@ -28,14 +33,7 @@
       width: 100%;
     }
   }
-  
-  .app__footer-cards .app__footer-card:last-child {
-    background-color: #f2f7fb;
-  }
-  
-  .app__footer-cards .app__footer-card:last-child:hover {
-    box-shadow: 0 0 25px #f2f7fb;
-  }
+ 
   
   .app__footer-form {
     width: 60%;
@@ -48,7 +46,6 @@
       margin: 0.75rem 0;
       border-radius: 9px;
       cursor: pointer;
-      background-color: var(--primary-color);
   
       transition: all 0.3s ease-in-out;
   
@@ -58,10 +55,10 @@
         padding: 0.95rem;
         border: none;
         border-radius: 9px;
-        background-color: var(--primary-color);
+        background-color: var(--gray-color);
   
         font-family: var(--font-base);
-        color: var(--secondary-color);
+        color: var(--primary-color);
         outline: none;
       }
   
@@ -70,7 +67,7 @@
       }
   
       &:hover {
-        box-shadow: 0 0 25px var(--primary-color);
+        box-shadow: 0 0 10px var(--lightGray-color);
       }
     }
   
@@ -78,10 +75,10 @@
       padding: 1rem 2rem;
       border-radius: 9px;
       border: none;
-      background-color: var(--secondary-color);
+      background-color: var(--primary-color);
   
       font-weight: 500;
-      color: var(--white-color);
+      color: var(--gray-color);
       outline: none;
       margin: 2rem 0 0 0;
       font-family: var(--font-base);
@@ -90,7 +87,7 @@
       cursor: pointer;
   
       &:hover {
-        background-color: var(--primary-color);
+        background-color: var(--lightGray-color);
       }
     }
   
