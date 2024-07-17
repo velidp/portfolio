@@ -45,7 +45,7 @@ const Testimonial = () => {
             <div className='app__testimonial-content'>
               <p className='p-text'>{ tstm.feedback }</p>
               <div>
-                <h4 className='bold-text'>{ tstm.name }</h4>
+                <h4 className='person-name-text'>{ tstm.name }</h4>
                 <h5 className='p-text'>{ tstm.company }</h5>
               </div>
             </div>
