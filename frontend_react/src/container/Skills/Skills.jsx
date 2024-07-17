@@ -28,7 +28,7 @@ const Skills = () => {
 
   return (
     <>
-      <h2 className="head-text"><span>Skills</span> & Experiences</h2>
+      <h2 className="head-text">Skills & <span>Experiences</span></h2>
 
       <div className="app__skills-container">
         <motion.div className="app__skills-list">
@@ -75,7 +75,7 @@ const Skills = () => {
                     <Tooltip
                       id={work.name}
                       effect='solid'
-                      arrowColor='#fff'
+                      arrowColor='red'
                       className='skills-tooltip'
                     >
                       {work.desc}
