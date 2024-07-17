@@ -20,10 +20,7 @@ const About = () => {
   return (
     <>
       <h2 className='head-text'>
-        I Know That
-        <span> Good Design </span>
-        means
-        <span> Good Bussines </span>
+        <span>Fusion of </span>Engineering <span>and </span>Creativity
       </h2>
 
       <div className='app__profiles'>
@@ -37,7 +34,7 @@ const About = () => {
           >
             <img src={urlFor(about.imgUrl)} alt={about.title}/>
             <h2 className='bold_text' style={{ marginTop: 20 }}>{about.title}</h2>
-            <p className='p-text' style={{ marginTop: 20 }}>{about.description}</p>
+            <p className='about-text' style={{ marginTop: 20 }}>{about.description}</p>
           </motion.div>
         ))}
       </div>

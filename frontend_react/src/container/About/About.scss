@@ -3,6 +3,14 @@
     width: 100%;
     flex-direction: column;
   }
+
+  .bold_text {
+    color: var(--gray-color);
+  }
+
+  .about-text {
+    color: var(--lightGray-color);
+  }
   
   .app__profiles {
     display: flex;

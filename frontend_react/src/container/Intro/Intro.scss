@@ -16,9 +16,6 @@
   
     .head-text {
       margin-bottom: 2rem;
-      span {
-        color: var(--lightGray-color);
-      }
     }
   
     .app__bio-content {
@@ -55,10 +52,10 @@
         padding: 1rem 2rem;
         border-radius: 9px;
         border: none;
-        background-color: var(--lightGray-color);
+        background-color: var(--primary-color);
     
         font-weight: 500;
-        color: var(--white-color);
+        color: var(--black-color);
         outline: none;
         margin: 2rem 0 0 0;
         font-family: var(--font-base);
@@ -67,7 +64,7 @@
         cursor: pointer;
     
         &:hover {
-          background-color: var(--primary-color);
+          background-color: var(--lightGray-color);
         }
       }
   }
@@ -77,8 +74,15 @@
       flex-direction: column;
     }
   
-    .app__bio-text {
-      text-align: center;
+    .app__bio-container {
+      .app__bio-text {
+   
+        max-width: 70%; 
+        text-align: justify;
+        text-align-last: left;
+        hyphens: auto; // Automatically hyphenate words when needed
+        word-break: break-word; // Break long words if necessary
     }
   }
+}
   
