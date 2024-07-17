@@ -33,7 +33,7 @@ const About = () => {
             key={about.title + index}
           >
             <img src={urlFor(about.imgUrl)} alt={about.title}/>
-            <h2 className='title-text' style={{ marginTop: 20 }}>{about.title}</h2>
+            <h2 className='proficiencies-title-text' style={{ marginTop: 20 }}>{about.title}</h2>
             <p className='about-text' style={{ marginTop: 20 }}>{about.description}</p>
           </motion.div>
         ))}

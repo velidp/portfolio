@@ -43,9 +43,7 @@ const Work = () => {
   return (
     <>
       <h2 className='head-text'>
-        My Creative
-        <span> Portfolie </span>
-        Section
+        <span>My Innovation</span> Hub
       </h2>
 
       <div className='app__work-filter'>
@@ -101,8 +99,8 @@ const Work = () => {
             </div>
 
             <div className='app__work-content app__flex'>
-              <h4 className='bold-text'>{work.title}</h4>
-              <p className='p-text' style={{ marginTop: 10 }}>{work.description}</p>
+              <h4 className='title-text'>{work.title}</h4>
+              <p className='desription-text' style={{ marginTop: 10 }}>{work.description}</p>
 
               <div className='app__work-tag app__flex'>
                 <p className='p-text'>{work.tags[0]}</p>
