@@ -1,12 +1,12 @@
-import React, { useRef, useEffect, useState } from 'react';
+import React, { useRef } from 'react';
 
 import { About, Footer, Skills, Testimonial, Work, Intro } from './container'; 
 import { Navbar } from './components';
 import './App.scss';
 import VideoBackground from './components/VideoBackground';
+import ScrollHandler from './components/ScrollHandler';
 
 const App = () => {
-
 
   const homeRef = useRef(null);
   const introRef = useRef(null);
@@ -17,36 +17,6 @@ const App = () => {
   const footerRef = useRef(null);
 
   const sections = [homeRef, introRef, aboutRef, workRef, skillsRef, testimonialRef, footerRef];
-  
-  const [currentSectionIndex, setCurrentSectionIndex] = useState(0);
-
-  const scrollToSection = (index) => {
-    if (sections[index] && sections[index].current) {
-      window.scrollTo({
-        top: sections[index].current.offsetTop,
-        behavior: 'smooth',
-      });
-    }
-  };
-
-  const handleScroll = (event) => {
-    const delta = event.deltaY;
-    const newIndex = delta > 0
-      ? Math.min(currentSectionIndex + 1, sections.length - 1)
-      : Math.max(currentSectionIndex - 1, 0);
-    
-    if (newIndex !== currentSectionIndex) {
-      setCurrentSectionIndex(newIndex);
-      scrollToSection(newIndex);
-    }
-  };
-
-  useEffect(() => {
-    window.addEventListener('wheel', handleScroll, { passive: true });
-    return () => {
-      window.removeEventListener('wheel', handleScroll);
-    };
-  }, [currentSectionIndex, sections]);
 
   return (
     <div className='app'>
@@ -58,8 +28,9 @@ const App = () => {
       <div ref={skillsRef}><Skills/></div>
       <div ref={testimonialRef}><Testimonial/></div>
       <div ref={footerRef}><Footer/></div>
+      <ScrollHandler sections={sections} />
     </div>
-  )
+  );
 }
 
 export default App;
