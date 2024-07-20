@@ -12,7 +12,7 @@ const VideoBackground = () => {
       autoplay: 1,
       mute: 1,
       loop: 1,
-      playlist: "wgPdUvEU830",
+      playlist: "np7CvKfxjE4",
       controls: 0
     },
   };
@@ -21,7 +21,7 @@ const VideoBackground = () => {
     <div className="video-background">
       <div className="video">
         <div className="video-container">
-          <YouTube videoId={"wgPdUvEU830"} opts={opts} className="video-iframe" />
+          <YouTube videoId={"np7CvKfxjE4"} opts={opts} className="video-iframe" />
         </div>
         <div className="overlay"></div>
         <div className="header-container">
