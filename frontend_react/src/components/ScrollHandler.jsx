@@ -61,7 +61,7 @@ const ScrollHandler = ({ sections }) => {
           scrollToSection(currentSectionIndex - 1);
         }
       }
-    }, 550);
+    }, 250);
 
     window.addEventListener('wheel', handleWheel, { passive: true });
 
