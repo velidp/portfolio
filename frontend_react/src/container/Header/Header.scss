@@ -40,10 +40,10 @@
   width: 100%;
   padding: 1rem 2rem;
   
-  background: rgba(var(--primary-color), 0.05);
+  background: rgba(var(--primary-color), 0.079);
   box-shadow: 0 1px 15px 0 rgb(46, 46, 46);
-  backdrop-filter: grayscale(100%) blur(300px);
-  -webkit-backdrop-filter: grayscale(100%) blur(300px);
+  backdrop-filter: grayscale(100%) blur(200px);
+  -webkit-backdrop-filter: grayscale(100%) blur(200px);
 
   border-radius: 9px;
   
@@ -94,10 +94,10 @@
     border-radius: 50%;
     margin-left: 20px;
     
-    background: rgba(var(--primary-color), 0.05);
+    background: rgba(var(--primary-color), 0.079);
     box-shadow: 0 1px 15px 0 rgb(46, 46, 46);
-    backdrop-filter: grayscale(100%) blur(300px);
-    -webkit-backdrop-filter: grayscale(100%) blur(300px);
+    backdrop-filter: grayscale(100%) blur(200px);
+    -webkit-backdrop-filter: grayscale(100%) blur(200px);
 
     img {
       width: 60%;
