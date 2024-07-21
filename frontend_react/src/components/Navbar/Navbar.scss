@@ -8,15 +8,18 @@
     padding: 1rem 2rem;
 
 
-    background: rgba(var(--primary-color), 0.25);
-    box-shadow: 0 1px 11px 0 black;
+    background: black;
+
+    box-shadow: 0 1px 1.7px 0 var(--primary-color);
+    
+    /*
     backdrop-filter: grayscale(100%) blur(100px);
     -webkit-backdrop-filter: grayscale(100%) blur(100px);
-
+*/
     
 
 
-    border: 1px solid rgba(255, 255, 255, 0.18);
+ //   border: 1px solid rgba(255, 255, 255, 0.18);
     position: fixed;
     z-index: 2;
   }
