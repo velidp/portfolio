@@ -21,6 +21,7 @@ const App = () => {
   return (
     <div className='app'>
       <Navbar/>
+      <ScrollHandler sections={sections} />
       <div ref={homeRef}><VideoBackground/></div>
       <div ref={introRef}><Intro/></div>
       <div ref={aboutRef}><About/></div>
@@ -28,7 +29,6 @@ const App = () => {
       <div ref={skillsRef}><Skills/></div>
       <div ref={testimonialRef}><Testimonial/></div>
       <div ref={footerRef}><Footer/></div>
-      <ScrollHandler sections={sections} />
     </div>
   );
 }

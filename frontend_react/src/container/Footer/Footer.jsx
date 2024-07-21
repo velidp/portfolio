@@ -45,11 +45,11 @@ const Footer = () => {
 
   return (
     <>
-      <h2 className='head-text'><span>Let's get in</span> touch</h2>
+      <h2 className='head-text head-text-contact'><span>Let's get in</span> touch</h2>
 
       <div className='app__footer-cards'>
         <div className='app__footer-card'>
-          <img src={images.logo} />
+          <img src={images.logo} alt="logo"/>
         </div>
 
         {!isFormSubmitted ? 

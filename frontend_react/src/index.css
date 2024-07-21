@@ -11,6 +11,7 @@
   --lightGray-color: #748D92; 
   --gray-color: #D3D9D4; 
 
+  overflow-y: hidden;
 
 
 /*
@@ -21,22 +22,13 @@
   --gray-color: #F3F3F2; 
   --brown-color: #CC9933; 
   --white-color: #212529; 
-  
+*/
 
-  /*
-  --primary-color: #edf2f8;
-  --secondary-color: #313bac;
-  --black-color: #030303;
-  --lightGray-color: #e4e4e4;
-  --gray-color: #6b7688;
-  --brown-color: #46364a;
-  --white-color: #ffffff;
-  */
+
 }
 
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  scroll-behavior: smooth;
 }

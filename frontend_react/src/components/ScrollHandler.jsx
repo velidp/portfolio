@@ -1,47 +1,74 @@
-import { useEffect, useState, useCallback, useRef } from 'react';
-import { debounce } from 'lodash';
+import { useEffect, useState, useCallback } from 'react';
 
 const ScrollHandler = ({ sections }) => {
   const [currentSectionIndex, setCurrentSectionIndex] = useState(0);
-  const isChangingSection = useRef(false); // Flag to track section change status
+
+  const debounce = (func, wait) => {
+    let timeout;
+    return function (...args) {
+      const context = this;
+      clearTimeout(timeout);
+      timeout = setTimeout(() => func.apply(context, args), wait);
+    };
+  };
 
   const scrollToSection = useCallback((index) => {
-    if (sections[index] && sections[index].current) {
-      window.scrollTo({
-        top: sections[index].current.offsetTop,
-        behavior: 'smooth',
-      });
-    }
+    sections[index].current.scrollIntoView({ behavior: 'smooth' });
+    setCurrentSectionIndex(index);
   }, [sections]);
 
-  const handleScroll = useCallback(debounce((delta) => {
-    if (isChangingSection.current) return; // Prevent changes while a section change is in progress
+  useEffect(() => {
+    const options = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.5,
+    };
 
-    isChangingSection.current = true;
-    const newIndex = delta > 0
-      ? Math.min(currentSectionIndex + 1, sections.length - 1)
-      : Math.max(currentSectionIndex - 1, 0);
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const index = sections.findIndex((ref) => ref.current === entry.target);
+          if (index !== -1) {
+            setCurrentSectionIndex(index);
+          }
+        }
+      });
+    }, options);
 
-    if (newIndex !== currentSectionIndex) {
-      setCurrentSectionIndex(newIndex);
-      scrollToSection(newIndex);
-    }
+    sections.forEach((ref) => {
+      if (ref.current) {
+        observer.observe(ref.current);
+      }
+    });
 
-    setTimeout(() => {
-      isChangingSection.current = false;
-    }, 175); // Duration should match debounce delay
-  }, 175), [currentSectionIndex, sections, scrollToSection]);
+    return () => {
+      sections.forEach((ref) => {
+        if (ref.current) {
+          observer.unobserve(ref.current);
+        }
+      });
+    };
+  }, [sections]);
 
   useEffect(() => {
-    const onScroll = (event) => {
-      handleScroll(event.deltaY);
-    };
+    const handleWheel = debounce((event) => {
+      if (event.deltaY > 0) {
+        if (currentSectionIndex < sections.length - 1) {
+          scrollToSection(currentSectionIndex + 1);
+        }
+      } else {
+        if (currentSectionIndex > 0) {
+          scrollToSection(currentSectionIndex - 1);
+        }
+      }
+    }, 550);
 
-    window.addEventListener('wheel', onScroll, { passive: true });
+    window.addEventListener('wheel', handleWheel, { passive: true });
+
     return () => {
-      window.removeEventListener('wheel', onScroll);
+      window.removeEventListener('wheel', handleWheel);
     };
-  }, [handleScroll]);
+  }, [currentSectionIndex, scrollToSection, sections]);
 
   return null;
 };
