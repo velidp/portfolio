@@ -29,7 +29,7 @@
       img {
         width: 100%;
         box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-        border-radius: 9px;
+        border-radius: 19px;
 
         &:hover {
           transition: transform 0.3s ease-in-out;
@@ -52,7 +52,7 @@
   
     button {
         padding: 1rem 2rem;
-        border-radius: 9px;
+        border-radius: 19px;
         border: none;
         background-color: var(--primary-color);
     
