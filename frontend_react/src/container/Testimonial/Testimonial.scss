@@ -14,8 +14,8 @@
     min-height: 320px;
 
 
-    background-color: var(--primary-color);
-    box-shadow: 0 0 5px var(--secondary-color);
+    background-color: black;
+    box-shadow: 0 0 5px var(--primary-color);
   
     display: flex;
     flex-direction: row;
@@ -99,7 +99,8 @@
       width: 50px;
       height: 50px;
       border-radius: 50%;
-      background-color: var(--gray-color);
+      background-color: black;
+      box-shadow: 0 0 5px var(--primary-color);
       cursor: pointer;
       margin: 1rem;
       transition: all 0.3s ease-in-out;
