@@ -39,13 +39,18 @@
     }
   
     .app__bio-text {
-      max-width: 50%; 
+      height: 100%;
+      max-width: 31%; 
       margin: 1rem;
       text-align: left;
   
+      padding-top: 19px;
+      margin-left: 27px;
+
+
       p {
         font-size: 1.2rem;
-        line-height: 1.6;
+        line-height: 1.7;
         color: var(--gray-color);
       }
     }
@@ -59,7 +64,7 @@
         font-weight: 500;
         color: var(--gray-color);
         outline: none;
-        margin: 2rem 0 0 0;
+        margin: 3rem 0 0 0;
         font-family: var(--font-base);
     
         transition: cubic-bezier(0.55, 0.085, 0.68, 0.53);
