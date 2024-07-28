@@ -13,7 +13,7 @@
     .about-head-text {
       margin-bottom: 2rem;
 
-      font-size: 2.75rem;
+      font-size: 2.3vw;
       font-weight: 800;
       text-align: center;
       color: var(--black-color);
@@ -27,9 +27,6 @@
         font-size: 4rem;
       }
     
-      @media screen and (max-width: 450px) {
-        font-size: 2rem;
-      }
     }
   
     .app__bio-content {
@@ -41,7 +38,7 @@
     }
   
     .app__bio-image {
-      max-width: 300px;
+      max-width: 16.3vw; 
       margin: 1rem;
       
       img {
@@ -58,16 +55,16 @@
   
     .app__bio-text {
       height: 100%;
-      max-width: 31%; 
+      max-width: 35vw;
       margin: 1rem;
       text-align: left;
-  
-      padding-top: 19px;
-      margin-left: 27px;
+      
+      padding-top: 1vw;
+      margin-left: 1vw;
 
 
       p {
-        font-size: 1.2rem;
+        font-size: 1.1vw;
         line-height: 1.7;
         color: var(--gray-color);
       }
@@ -94,58 +91,71 @@
       }
   }
   
-  
+    
+
   @media screen and (max-width: 700px) {
+    
     .app__bio-container {
-      margin: 1em 0;
-  
-      button {
-        margin: 0;
+
+      .app__bio-content {
+        flex-direction: column;
+      //  align-items: center;
       }
-  
-      .app__bio-image {
-        margin: 0;
-  
-      
-        @media screen and (max-height: 920px) {
-          max-width: 170px;
-          margin: 1rem;
-        }
-  
-        @media screen and (max-height: 860px) {
-          max-width: 35%;
-          margin: 1rem;
-        }
-  
-        @media screen and (max-height: 790px) {
-          max-width: 20%;
-          margin: 1rem;
-        }
-  
-        @media screen and (max-height: 720px) {
-          display: none;
-        }
-      }
-  
+
       .about-head-text {
-        font-size: 1.75rem;
-        font-weight: 790;
-        margin: 1.5rem 0 1.2rem;
+        font-size: 6.1vw;
       }
-  
+ 
+
       .app__bio-text {
-        padding-top: 0;
-        margin-left: 27px;
-        max-width: 300px;
-        text-align: justify;
-        text-align-last: left;
-        hyphens: auto;
-        word-break: break-word;
-  
+        max-width: 55vw;
+
         p {
-          font-size: 0.9rem;
+          font-size: 3.3vw;
+          text-align: justify;           
+          hyphens: auto;                 
+          overflow-wrap: break-word;     
+          word-wrap: break-word;         
         }
+      }}
+   
+      .app__bio-container {
+        .app__bio-image {
+          max-width: 23vw; 
       }
-    }
+   }
   }
-  
+   
+
+  @media screen and (max-height: 850px) {
+    .app__bio-container {
+
+      .app__bio-content {
+        flex-direction: column;
+      //  align-items: center;
+      }
+
+      .about-head-text {
+        font-size: 5.7vw;
+      }
+ 
+
+      .app__bio-text {
+        max-width: 55vw;
+
+        p {
+          font-size: 3vw;
+          text-align: justify;           
+          hyphens: auto;                 
+          overflow-wrap: break-word;     
+          word-wrap: break-word;         
+        }
+      }}
+   
+      .app__bio-container {
+        .app__bio-image {
+          max-width: 20vw; 
+      }
+   }
+  }
+    
