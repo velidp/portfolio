@@ -3,32 +3,26 @@
   width: 100%;
   flex-direction: column;
 
-  @media screen and (max-width: 768px) {
-    flex-direction: column;
-  }
 }
 
 .thanks-text {
-  font-size: 3rem;
+  font-size: 3vw;
 }
 
 .app__footer-cards {
-  width: 60%;
+  width: 60vw;
   display: flex;
   flex-direction: column;
- // justify-content: space-evenly;
   align-items: center;
- //  flex-wrap: wrap;
-//  margin: 4em 2rem 2rem;
+ 
 
   .app__footer-card {
     img {
       width: 10vw;
-    //  margin: 0 1.3rem 1rem;
     }
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 700px) {
     width: 100%;
   }
 }
@@ -36,28 +30,27 @@
 .app__footer-form {
   width: 60%;
   flex-direction: column;
-//  margin: 1rem 2rem;
 
   .error {
     input,
     textarea {
-      box-shadow: 0 0 6.5px 1px red;
+      box-shadow: 0 0 0.5vw 0.06vw red;
     }
   }
 
   div {
     width: 100%;
-    margin: 0.75rem 0;
-    border-radius: 19px;
+    margin: 0.7vw 0;
+    border-radius: 19vw;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
 
     input,
     textarea {
       width: 100%;
-      padding: 0.85rem;
+      padding: 0.85vw;
       border: none;
-      border-radius: 19px;
+      border-radius: 0.87vw;
       background-color: var(--gray-color);
       font-family: var(--font-base);
       color: var(--primary-color);
@@ -74,8 +67,26 @@
   }
 
  
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 700px) {
     width: 100%;
-    margin: 1rem 0;
+    margin: 1vw 0;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .app__footer-form div {
+    margin: 2.9vw 0;
+    input, textarea {
+      padding: 2.85vw;
+      border-radius: 4.87vw;
+      margin: 0 1.2vw 0 1.2vw;
+    }
+  }
+  .app__footer-cards {
+  .app__footer-card {
+      img {
+        width: 37vw;
+      }
+    }
   }
 }
