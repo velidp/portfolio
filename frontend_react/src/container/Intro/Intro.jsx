@@ -46,7 +46,7 @@ const Intro = () => {
                 </div>
             )}
             <div className='button'>
-                <button type='button' className='p-text' onClick={handleDownloadCV}>Download CV</button>
+                <button type='button' className='button-text' onClick={handleDownloadCV}>Download CV</button>
             </div>
         </div>
     );

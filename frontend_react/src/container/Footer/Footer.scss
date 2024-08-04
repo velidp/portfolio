@@ -76,24 +76,7 @@
     }
   }
 
-  button {
-    padding: 1rem 2rem;
-    border-radius: 19px;
-    border: none;
-    background-color: var(--primary-color);
-    font-weight: 500;
-    color: var(--gray-color);
-    outline: none;
-    margin: 2rem 0 0 0;
-    font-family: var(--font-base);
-    transition: cubic-bezier(0.55, 0.085, 0.68, 0.53);
-    cursor: pointer;
-
-    &:hover {
-      background-color: var(--black-color);
-    }
-  }
-
+ 
   @media screen and (max-width: 768px) {
     width: 100%;
     margin: 1rem 0;

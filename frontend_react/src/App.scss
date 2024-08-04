@@ -66,9 +66,7 @@
       color: var(--gray-color);
     }
   
-    @media screen and (min-width: 2000px) {
-      font-size: 4rem;
-    }
+  
   
     @media screen and (max-width: 450px) {
       font-size: 2rem;
@@ -76,15 +74,24 @@
   }
   
   .text-common {
-    font-size: 1rem;
     text-align: left;
     color: var(--gray-color);
     line-height: 1.5;
-  
-    @media screen and (min-width: 2000px) {
-      font-size: 1.75rem;
+  }
+
+
+  @media (min-aspect-ratio: 1/1) {
+    .text-common {
+      font-size: 1vw;
     }
   }
+  
+  @media (max-aspect-ratio: 1/1) {
+    .text-common {
+      font-size: 1vh;
+    }
+  }
+
   
   .p-text {
     @extend .text-common;
@@ -102,9 +109,7 @@
     color: var(--lightGray-color);
     text-align: left;
   
-    @media screen and (min-width: 2000px) {
-      font-size: 2rem;
-    }
+  
   
     @media screen and (max-width: 450px) {
       font-size: 0.9rem;
@@ -152,17 +157,7 @@
         }
       }
   
-      @media screen and (min-width: 2000px) {
-        width: 70px;
-        height: 70px;
-  
-        margin: 0.5rem 0;
-  
-        svg {
-          width: 30px;
-          height: 30px;
-        }
-      }
+      
     }
   }
   
@@ -187,10 +182,7 @@
         background-color: var(--secondary-color);
       }
   
-      @media screen and (min-width: 2000px) {
-        width: 20px;
-        height: 20px;
-      }
+      
     }
   }
   
@@ -208,3 +200,100 @@
       }
     }
   }
+
+
+  @media (min-aspect-ratio: 1/1) {
+    .button-text {
+      font-size: 0.9vw;
+    }
+  }
+  
+  @media (max-aspect-ratio: 1/1) {
+    .button-text {
+      font-size: 0.9vh;
+    }
+  }
+
+  @media screen and (max-width: 700px) and (min-aspect-ratio: 1/1) {
+    .button-text {
+      font-size: 1.5vw;
+    }
+  }
+  
+  @media screen and (max-width: 700px) and (max-aspect-ratio: 1/1) {
+    .button-text {
+      font-size: 1.5vh;
+    }
+  }
+
+  @media screen and (max-width: 700px) and (min-aspect-ratio: 348/730) {
+  
+      button {
+        padding: 2.5vw 3.5vw;
+        // background-color: teal;
+      }
+    }
+
+    button {
+      padding: 1vw 2vw;
+      border-radius: 19vw;
+      border: none;
+      background-color: var(--primary-color);
+      font-weight: 500;
+      color: var(--gray-color);
+      outline: none;
+      margin: 3.7vh 0 0 0;
+      font-family: var(--font-base);
+      transition: cubic-bezier(0.55, 0.085, 0.68, 0.53);
+      cursor: pointer;
+      &:hover {
+        background-color: var(--black-color);
+      }
+    }@media (min-aspect-ratio: 1/1) {
+      .button-text {
+        font-size: 0.9vw;
+      }
+    }
+    
+    @media (max-aspect-ratio: 1/1) {
+      .button-text {
+        font-size: 0.9vh;
+      }
+    }
+    
+    @media screen and (max-width: 700px) and (min-aspect-ratio: 1/1) {
+      .button-text {
+        font-size: 1.5vw;
+      }
+    }
+    
+    @media screen and (max-width: 700px) and (max-aspect-ratio: 1/1) {
+      .button-text {
+        font-size: 1.5vh;
+      }
+    }
+    
+    @media screen and (max-width: 700px) and (min-aspect-ratio: 348/730) {
+      button {
+        padding: 2.5vw 3.5vw;
+      }
+    }
+    
+    button {
+      padding: 1vw 2vw;
+      border-radius: 19vw;
+      border: none;
+      background-color: var(--primary-color);
+      font-weight: 500;
+      color: var(--gray-color);
+      outline: none;
+      margin: 3.7vh 0 0 0;
+      font-family: var(--font-base);
+      transition: cubic-bezier(0.55, 0.085, 0.68, 0.53);
+      cursor: pointer;
+    }
+    
+    button:hover {
+      background-color: var(--black-color);
+    }
+    
