@@ -11,18 +11,6 @@
   margin: 2em 0;
 }
 
-.app__bio-container .about-head-text {
-  margin-bottom: 2vh;
-  font-size: 2.3vw;
-  font-weight: 800;
-  text-align: center;
-  color: var(--black-color);
-  text-transform: capitalize;
-}
-
-.app__bio-container .about-head-text span {
-  color: var(--gray-color);
-}
 
 .app__bio-container .app__bio-content {
   display: flex;
@@ -72,10 +60,6 @@
       flex-wrap: nowrap;
     }
 
-    .about-head-text {
-      font-size: 6.8vw;
-    }
-
     .app__bio-text {
       max-width: 80vw;
     }
@@ -108,9 +92,6 @@
       flex-wrap: nowrap;
     }
 
-    .about-head-text {
-      font-size: 3.5vw;
-    }
 
     .app__bio-text {
       max-width: 70vw;
