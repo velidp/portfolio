@@ -70,13 +70,13 @@
 
   @media screen and (max-width: 700px) and (max-aspect-ratio: 348/730) {
    .head-text {
-      font-size: 6.8vw;
+      font-size: 7.8vw;
     }
   }
   
   @media screen and (max-width: 700px) and (min-aspect-ratio: 348/730) {
     .head-text {
-      font-size: 3.5vw;
+      font-size: 5.5vw;
     }
   }
   
@@ -129,8 +129,6 @@
     align-items: center;
     flex-direction: column;
   
-   
-
     padding: 1rem;
   
     div {
@@ -252,10 +250,13 @@
       font-family: var(--font-base);
       transition: cubic-bezier(0.55, 0.085, 0.68, 0.53);
       cursor: pointer;
-      &:hover {
-        background-color: var(--black-color);
-      }
-    }@media (min-aspect-ratio: 1/1) {
+    }
+    
+    button:hover {
+      background-color: var(--black-color);
+    }
+    
+    @media (min-aspect-ratio: 1/1) {
       .button-text {
         font-size: 0.9vw;
       }
@@ -277,29 +278,30 @@
       .button-text {
         font-size: 1.5vh;
       }
+      button {
+        padding: 3.5vw 6.5vw;
+    //    background-color: yellow;
+      }
     }
     
     @media screen and (max-width: 700px) and (min-aspect-ratio: 348/730) {
       button {
-        padding: 2.5vw 3.5vw;
+        padding: 3.5vw 6.5vw;
+     //   background-color: red;
       }
     }
     
-    button {
-      padding: 1vw 2vw;
-      border-radius: 19vw;
-      border: none;
-      background-color: var(--primary-color);
-      font-weight: 500;
-      color: var(--gray-color);
-      outline: none;
-      margin: 3.7vh 0 0 0;
-      font-family: var(--font-base);
-      transition: cubic-bezier(0.55, 0.085, 0.68, 0.53);
-      cursor: pointer;
+    
+    
+
+    @media (max-width: 700px) and (min-aspect-ratio: 1/1) {
+      .text-common {
+        font-size: 1.7vw;
+      }
     }
     
-    button:hover {
-      background-color: var(--black-color);
+    @media (max-width: 700px) and (max-aspect-ratio: 1/1) {
+      .text-common {
+        font-size: 1.7vh;
+      }
     }
-    
