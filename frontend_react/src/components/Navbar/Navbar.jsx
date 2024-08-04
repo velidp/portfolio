@@ -29,6 +29,7 @@ const Navbar = () => {
             <motion.div
               whileInView={{ x: [300, 0] }}
               transition={{ duration: 0.85, ease: 'easeOut' }}
+              className='app__navbar-slider'
             >
               <HiX onClick={() => setToggle(false)}/>
               <ul className='app__navbar-links'>
