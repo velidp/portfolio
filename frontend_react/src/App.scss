@@ -89,13 +89,13 @@
 
   @media (min-aspect-ratio: 1/1) {
     .text-common {
-      font-size: 1vw;
+      font-size: 0.87vw;
     }
   }
   
   @media (max-aspect-ratio: 1/1) {
     .text-common {
-      font-size: 1vh;
+      font-size: 0.87vh;
     }
   }
 
@@ -105,7 +105,6 @@
   }
   
   .selam-text {
-    font-size: 1.5rem;
     @extend .text-common;
   }
   
@@ -211,11 +210,19 @@
     .button-text {
       font-size: 0.9vw;
     }
+
+    .selam-text {
+      font-size: 1.3vw;
+    }
   }
   
   @media (max-aspect-ratio: 1/1) {
     .button-text {
       font-size: 0.9vh;
+    }
+
+    .selam-text {
+      font-size: 1.3vh;
     }
   }
 

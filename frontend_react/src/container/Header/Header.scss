@@ -26,7 +26,7 @@
 .app__header-info {
   display: flex;
   flex-direction: row;
-  width: 450px;
+  width: 23vw;
   margin-left: auto;
   margin-top: auto;
 
@@ -38,11 +38,11 @@
 
 .app__header-badge {
   width: 100%;
-  padding: 1rem 2rem;
+  padding: 2.4vh 2vw;
   
   background: black;
 
-  border-radius: 19px;
+  border-radius: 1.7vw;
   
   span {
     font-size: 2.5rem;
@@ -55,8 +55,29 @@
 }
 
 
+@media (min-aspect-ratio: 1/1) {
+  .name-text {
+    font-size: 2.27vw;
+  }
+
+  .app__header-badge {
+    border-radius: 1.7vw;
+  }
+}
+
+@media (max-aspect-ratio: 1/1) {
+  .name-text {
+    font-size: 2.27vh;
+  }
+
+  .app__header-badge {
+    border-radius: 1.7vh;
+  }
+}
+
+
 .name-text {
-  font-size: 2.75rem;
+  font-size: 2.27vw;
   font-weight: 800;
   text-align: left;
   color: var(--black-color);
@@ -69,6 +90,19 @@
 
   @media screen and (max-width: 1200px) {
     font-size: 2rem;
+  }
+}
+
+
+@media (min-aspect-ratio: 1/1) {
+  .profession-text {
+    font-size: 0.9vw;
+  }
+}
+
+@media (max-aspect-ratio: 1/1) {
+  .profession-text {
+    font-size: 0.9vh;
   }
 }
 
