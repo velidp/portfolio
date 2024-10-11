@@ -174,12 +174,11 @@
     padding: 1rem;
   
     .app__navigation-dot {
-      width: 10px;
-      height: 10px;
+      width: 0.47vw;
+      height: 0.47vw;
       border-radius: 50%;
       background-color: #cbcbcb;
-      margin: 0.5rem;
-  
+   
       transition: background-color 0.2s ease-in-out;
   
       &:hover {
@@ -214,6 +213,10 @@
     .selam-text {
       font-size: 1.3vw;
     }
+
+    .app__navigation-dot {
+      margin: 0.37vw;
+    }
   }
   
   @media (max-aspect-ratio: 1/1) {
@@ -223,6 +226,10 @@
 
     .selam-text {
       font-size: 1.7vh;
+    }
+
+    .app__navigation-dot {
+      margin: 0.37vw;
     }
   }
 
