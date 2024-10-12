@@ -27,11 +27,10 @@
 
 .app__bio-container .app__bio-image img {
   width: 100%;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-  border-radius: 50%;
-
+  box-shadow: 0 0 1vw rgba(0, 0, 0, 0.1);
+  border-radius: 21%;
+  transition: transform 0.5s ease-in-out;
   &:hover {
-    transition: transform 0.5s ease-in-out;
     transform: scale(1.05);
   }
 }
@@ -39,7 +38,7 @@
 .app__bio-container .app__bio-text {
   height: 100%;
   max-width: 35vw;
-  margin: 1rem;
+  margin: 1vw;
   text-align: left;
   padding-top: 1vw;
   margin-left: 1vw;
