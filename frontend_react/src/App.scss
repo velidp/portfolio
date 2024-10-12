@@ -110,16 +110,11 @@
   
   
   .bold-text {
-    font-size: 1rem;
+    font-size: 0.9vw;
     font-weight: 800;
     color: var(--lightGray-color);
     text-align: left;
-  
-  
-  
-    @media screen and (max-width: 450px) {
-      font-size: 0.9rem;
-    }
+
   }
   
   .app__social {
@@ -294,14 +289,12 @@
       }
       button {
         padding: 3.5vw 6.5vw;
-    //    background-color: yellow;
       }
     }
     
     @media screen and (max-width: 700px) and (min-aspect-ratio: 348/730) {
       button {
         padding: 3.5vw 6.5vw;
-     //   background-color: red;
       }
     }
     
@@ -319,3 +312,4 @@
         font-size: 1.7vh;
       }
     }
+
