@@ -34,7 +34,7 @@ const Intro = () => {
 
     return (
         <div className='app__bio-container'>
-            <h2 className='head-text'><span>About</span> Me</h2>
+            <h2 className='head-text head-text-intro'><span>About</span> Me</h2>
             {intro.length === 1 && (
                 <div className='app__bio-content'>
                     <div className='app__bio-image'>

@@ -19,7 +19,7 @@ const About = () => {
 
   return (
     <>
-      <h2 className='head-text'>
+      <h2 className='head-text head-text-about'>
         <span>Fusion of </span>Engineering <span>and </span>Creativity
       </h2>
 

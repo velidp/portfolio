@@ -8,7 +8,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 2vw 0;
+
 }
 
 
@@ -20,9 +20,16 @@
   width: 100%;
 }
 
+.head-text-intro {
+
+  position: relative;
+  
+  padding-bottom: 1.7vw;
+}
+
 .app__bio-container .app__bio-image {
   max-width: 16.3vw;
-  margin: 1vw;
+  margin: 0.7vw 1vw 0 0;
 }
 
 .app__bio-container .app__bio-image img {
@@ -38,9 +45,9 @@
 .app__bio-container .app__bio-text {
   height: 100%;
   max-width: 35vw;
-  margin: 1vw;
+  margin: 0 1vw 0 1vw;
   text-align: left;
-  padding-top: 1vw;
+  padding-top: 0.7vw;
   margin-left: 1vw;
 }
 

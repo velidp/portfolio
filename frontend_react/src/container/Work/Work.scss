@@ -13,6 +13,10 @@
   }
 
 
+  .head-text-work{
+    padding-top: 1.7vw;
+  }
+
   .desription-text {
     color: var(--black-color);
     margin-top: 1vw; 
@@ -26,7 +30,8 @@
     align-items: center;
     flex-wrap: wrap;
   
-    margin: 2vw 0 1vw;
+    padding: 1.3vw 0 1.3vw 0;
+
   
     .app__work-filter-item {
       padding: 0.5vw 1vw;
@@ -60,7 +65,7 @@
     align-items: center;
   
     .app__work-item {
-      width: 15vw;
+      width: 14vw;
       flex-direction: column;
   
       margin: 1vw;
@@ -86,7 +91,7 @@
   
   .app__work-img {
     width: 100%;
-    height: 13vw;
+    height: 11.2vw;
   
     position: relative;
   
