@@ -10,10 +10,11 @@
     color: var(--primary-color);
     font-family: var(--font-base);
     font-size: 1.05vw;
+    text-align: center;
   }
 
 
-  .head-text-work{
+  .head-text-work {
     padding-top: 1.5vw;
   }
 
@@ -21,6 +22,7 @@
     color: var(--black-color);
     margin-top: 1vw; 
     font-size: 0.77vw;
+    text-align: center;
   }
   
   .app__work-filter {
@@ -143,6 +145,7 @@
   
   .app__work-content {
     padding: 0.5vw;
+    min-height: 7.9vw;
     width: 100%;
     position: relative;
     flex-direction: column;
@@ -150,8 +153,6 @@
     h4 {
       margin-top: 1vw;
       line-height: 1.5;
-  
-      
     }
   
     .app__work-tag {
