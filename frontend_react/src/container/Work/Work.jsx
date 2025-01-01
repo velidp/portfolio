@@ -177,13 +177,13 @@ const Work = () => {
       
 
         <div className='app__testimonial-btns app__flex'>
-            <div className='app__flex' onClick={() => handleClick(currentIndex === 0 ? Math.floor(works.length / 4) * 4 : currentIndex - 4)}> 
-              <HiChevronLeft/>
-            </div>
-            <div className='app__flex' onClick={() => handleClick(currentIndex + 4)}> 
-              <HiChevronRight/>
-            </div>
+          <div className='app__flex' onClick={() => handleClick(currentIndex === 0 ? Math.floor(works.length / 4) * 4 : currentIndex - 4)}> 
+            <HiChevronLeft/>
           </div>
+          <div className='app__flex' onClick={() => handleClick(currentIndex + 4)}> 
+            <HiChevronRight/>
+          </div>
+        </div>
       </motion.div> 
 
 

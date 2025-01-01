@@ -6,11 +6,13 @@ import 'react-tooltip/dist/react-tooltip.css'
 import { AppWrap, MotionWrap } from '../../wrapper';
 import { urlFor, client } from '../../client';
 import './Skills.scss';
+import { HiChevronDown, HiChevronUp } from 'react-icons/hi';
 
 const Skills = () => {
 
   const [experiences, setExperiences] = useState([]);
   const [skills, setSkills] = useState([]);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
     const experiencesQuery = '*[_type == "experiences"]';
@@ -25,6 +27,14 @@ const Skills = () => {
     });
 
   }, []);
+
+
+  const handleClick = (index) => {
+    experiences.slice(currentIndex, currentIndex + 3).forEach(e => console.log("Name:" + JSON.stringify(e.works[0].name)));
+    if(index < experiences.length) {
+      setCurrentIndex(index);
+    } 
+  }
 
   return (
     <>
@@ -52,10 +62,11 @@ const Skills = () => {
 
 
         <div className="app__skills-exp">
-          {experiences.map((experience) => (
+        <div className="app__skills-exp-separator"> 
+          {experiences.slice(currentIndex, currentIndex + 3).map((experience, index) => (
             <motion.div
               className="app__skills-exp-item"
-              key={experience.year}
+              key={index}
             >
               
 
@@ -90,8 +101,21 @@ const Skills = () => {
               </motion.div>
             </motion.div>
           ))}
+        
         </div>
-
+        <div className='app__testimonial-btns app__flex'>
+            <div 
+              style={{ opacity: currentIndex === 0 ? 0.5 : 1, pointerEvents: currentIndex === 0 ? 'none' : 'auto' }} 
+              className='app__flex' onClick={() => handleClick(currentIndex - 3)}> 
+              <HiChevronUp/>
+            </div>
+            <div
+              style={{ opacity: (experiences.length < 4) || (currentIndex + 3 === experiences.length) || (currentIndex >= Math.floor(experiences.length / 3) *3) ? 0.5 : 1, pointerEvents: (experiences.length < 4) || (currentIndex + 3 === experiences.length) || (currentIndex >= Math.floor(experiences.length / 3) *3) ? 'none' : 'auto' }}  
+              className='app__flex' onClick={() => handleClick(currentIndex + 3)}> 
+              <HiChevronDown/>
+            </div>
+          </div>
+          </div>
       </div>
     </>
   );
