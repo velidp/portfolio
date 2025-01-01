@@ -168,3 +168,43 @@
       }
     }
   }
+
+
+
+  .app__works-btns {
+    flex-direction: row;
+  
+    div {
+      width: 2vw;
+      height: 2vw;
+      border-radius: 50%;
+      background-color: black;
+      box-shadow: 0 0 0.7vw var(--primary-color);
+      cursor: pointer;
+      margin: 0.7vw;
+
+      transition: all 0.3s ease-in-out;
+  
+      svg {
+        width: 1vw;
+        height: 1vw;
+        color: var(--secondary-color);
+      }
+  
+      &:hover {
+        background-color: var(--secondary-color);
+  
+        svg {
+          color: var(--gray-color);
+        }
+      }
+  
+     
+    }
+  }
+
+
+.app__work-portfolio-separator {
+  display: flex;
+  flex-direction: column; 
+}
