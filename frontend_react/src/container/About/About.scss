@@ -11,8 +11,8 @@
       margin-top: 2.7vh;
     }
     @media (max-aspect-ratio: 1/1) {
-      font-size: 1.03vh;
-      margin-top: 2.7vh;
+      font-size: 1.5vh;
+      margin-top: 1.7vh;
     }
   }
 
@@ -26,8 +26,8 @@
       margin-top: 2.7vh;
     }
     @media (max-aspect-ratio: 1/1) {
-      font-size: 0.8vh;
-      margin-top: 2.7vh;
+      font-size: 1.1vh;
+      margin-top: 1vh;
     }
   }
 
@@ -51,6 +51,12 @@
     }
     @media (max-aspect-ratio: 1/1) {
       margin-top: 2vh;
+    }
+  }
+
+  @media (max-aspect-ratio: 1/1) {
+    .app__profile-item:nth-child(4), .app__profile-item:nth-child(5), .app__profile-item:nth-child(6) {
+      margin-top: 4.5vh;
     }
   }
   
