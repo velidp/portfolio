@@ -189,11 +189,6 @@ button {
 }
 
 @media screen and (max-width: 500px) {
-  .app__navigation,
-  .app__social {
-    display: none;
-  }
-
   .copyright {
     padding: 2vw;
     p { font-size: 0.77vh; }

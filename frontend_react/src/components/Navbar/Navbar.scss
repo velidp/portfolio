@@ -28,6 +28,8 @@
   justify-content: center;
   align-items: center;
   list-style: none;
+  
+
 
   li {
     margin: 0 1vw;
@@ -113,15 +115,22 @@
       align-items: flex-start;
       flex-direction: column;
 
+      li:first-child {
+        margin-top: 5vh;
+      }
+
       li {
-        margin: 1vw;
+        margin: 3vw;
+        margin-bottom: 3vh;
+
+
 
         a {
           color: var(--gray-color);
           text-decoration: none;
-          font-size: 1vw;
+          font-size: 3vw;
           text-transform: uppercase;
-          font-weight: 500;
+          font-weight: 100;
           transition: all 0.3s ease-in-out;
 
           &:hover {
