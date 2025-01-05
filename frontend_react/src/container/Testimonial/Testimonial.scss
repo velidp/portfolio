@@ -10,7 +10,7 @@
     font-size: 1vw;
   }
   @media (max-aspect-ratio: 1/1) {
-    font-size: 1vh;
+    font-size: 1.5vh;
   }
 }
 
@@ -93,8 +93,9 @@
         line-height: 1.7vw;
       }
       @media (max-aspect-ratio: 1/1) {
-        font-size: 1vh;
-        line-height: 1.7vh;
+        font-size: 1.7vh;
+        line-height: 2.7vh;
+        margin-top: 2vh;
       }
       color: var(--gray-color);
       font-family: var(--font-base);
@@ -144,7 +145,10 @@
         height: 2vh;
         box-shadow: 0 0 0.7vh var(--primary-color);
         border-radius: 1.7vh;
-        margin: 0.7vh;
+        margin-top: 1.7vh;
+        margin-bottom: 5vh;
+        margin-left: 1vh;
+        margin-right: 1vh;
       }
       border-radius: 50%;
       background-color: black;
@@ -254,3 +258,20 @@
   }
 }
 
+.p-text-proverb {
+  @media (min-aspect-ratio: 1/1) {  
+    font-size: 5vw;
+  }
+  @media (max-aspect-ratio: 1/1) {  
+    font-size: 5vh;
+  }
+}
+
+.p-text-company {
+  @media (min-aspect-ratio: 1/1) {  
+    font-size: 1vw;
+  }
+  @media (max-aspect-ratio: 1/1) {  
+    font-size: 1.5vh;
+  }
+}

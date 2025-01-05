@@ -43,10 +43,10 @@ const Testimonial = () => {
           <div className='app__testimonial-item app__flex'>
             <img src={ urlFor(tstm.imageurl) } alt='testimonial'/>
             <div className='app__testimonial-content'>
-              <p className='p-text'>{ tstm.feedback }</p>
+              <p className='p-text-proverb'>{ tstm.feedback }</p>
               <div>
                 <h4 className='person-name-text'>{ tstm.name }</h4>
-                <h5 className='p-text'>{ tstm.company }</h5>
+                <h5 className='p-text-company'>{ tstm.company }</h5>
               </div>
             </div>
           </div>
