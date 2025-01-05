@@ -55,7 +55,7 @@ const Skills = () => {
               >
                 <img src={urlFor(skill.icon)} alt={skill.name} />
               </div>
-              <p className="p-text">{skill.name}</p>
+              <p className="p-text-skill-name">{skill.name}</p>
             </motion.div>
           ))}
         </motion.div>
@@ -93,7 +93,7 @@ const Skills = () => {
                     </Tooltip>
 
                     <div className="app__skills-exp-year">
-                      <p className="bold-text">{experience.year}</p>
+                      <p className="bold-text-period">{experience.year}</p>
                     </div>
 
                   </>
@@ -103,7 +103,7 @@ const Skills = () => {
           ))}
         
         </div>
-        <div className='app__testimonial-btns app__flex'>
+        <div className='app__skills-btns app__flex'>
             <div 
               style={{ opacity: currentIndex === 0 ? 0.5 : 1, pointerEvents: currentIndex === 0 ? 'none' : 'auto' }} 
               className='app__flex' onClick={() => handleClick(currentIndex - 3)}> 
