@@ -58,30 +58,26 @@
     .app__work-filter-item {
       @media (min-aspect-ratio: 1/1) {
         padding: 0.5vw 1vw;
-      }
-      @media (max-aspect-ratio: 1/1) {
-        padding: 0.5vh 1vh;
+        border-radius: 25vw;
+        margin: 0.5vw;
+      //  font-size: 1.3vw;
       }
 
-      @media (min-aspect-ratio: 1/1) {
-        border-radius: 25vw;
-      }
       @media (max-aspect-ratio: 1/1) {
+        padding: 0.5vh 1vh;
         border-radius: 25vh;
+        font-size: 1.3vh;
+        margin: 2vh 0 2vh 0;
+        margin: 1.5vh 0.5vh 1.5vh 0.5vh;
       }
+
+      
       background-color: var(--gray-color);
       color: var(--primary-color);
-      font-weight: 800;
+      font-weight: 900;
   
       cursor: pointer;
       transition: all 0.3s ease;
-
-      @media (min-aspect-ratio: 1/1) {
-        margin: 0.5vw;
-      }
-      @media (max-aspect-ratio: 1/1) {
-        margin: 0.5vh;
-      }
   
       &:hover {
         background-color: var(--secondary-color);

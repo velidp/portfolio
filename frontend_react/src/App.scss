@@ -69,11 +69,20 @@
   padding: 1vw;
 
   div {
-    width: 1.9vw;
-    height: 1.9vw;
+    @media (min-aspect-ratio: 1/1) {
+      width: 1.9vw;
+      height: 1.9vw;
+      margin: 0.57vw 0 0 0.21vw;
+    }
+    @media (max-aspect-ratio: 1/1) {
+      width: 1.9vh;
+      height: 1.9vh;
+      margin: 1.2vh 0 0 0.21vh;
+    }
+
     border-radius: 50%;
     background-color: var(--primary-color);
-    margin: 0.57vw 0 0 0.21vw;
+    
     border: 2.5px solid var(--secondary-color);
     display: flex;
     justify-content: center;
@@ -82,8 +91,14 @@
     cursor: pointer;
 
     svg {
-      width: 0.9vw;
-      height: 0.9vw;
+      @media (min-aspect-ratio: 1/1) {
+        width: 0.9vw;
+        height: 0.9vw;
+      }
+      @media (max-aspect-ratio: 1/1) {
+        width: 0.9vh;
+        height: 0.9vh;
+      }
       color: var(--gray-color);
     }
 
@@ -106,8 +121,15 @@
   padding: 1vw;
 
   &-dot {
-    width: 0.47vw;
-    height: 0.47vw;
+    @media (min-aspect-ratio: 1/1) {
+      width: 0.47vw;
+      height: 0.47vw;
+    }
+    @media (max-aspect-ratio: 1/1) {
+      width: 0.63vh;
+      height: 0.63vh;
+    }
+   
     border-radius: 50%;
     background-color: #cbcbcb;
     transition: background-color 0.2s ease-in-out;
@@ -162,9 +184,9 @@ button {
 
 @media (max-aspect-ratio: 1/1) {
   .text-common { font-size: 0.87vh; }
-  .button-text { font-size: 0.9vh; }
+  .button-text { font-size: 1.3vh; }
   .selam-text { font-size: 1.7vh; }
-  .app__navigation-dot { margin: 0.37vw; }
+  .app__navigation-dot { margin-top: 1.37vh; margin-right: 0.1vh; }
 }
 
 @media screen and (max-width: 700px) {
