@@ -3,7 +3,6 @@ import { AppWrap, MotionWrap } from '../../wrapper';
 import { urlFor, client } from '../../client';
 
 import './Intro.scss';
-
 const Intro = () => {
     const [intro, setIntro] = useState([]);
 
