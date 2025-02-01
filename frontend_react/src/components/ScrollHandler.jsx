@@ -75,12 +75,39 @@ const ScrollHandler = ({ sections }) => {
       }
     };
 
+    let touchStartY = 0;
+
+    const handleTouchStart = (event) => {
+      touchStartY = event.touches[0].clientY;
+    };
+
+    const handleTouchEnd = (event) => {
+      const touchEndY = event.changedTouches[0].clientY;
+      const deltaY = touchEndY - touchStartY;
+
+      if (deltaY < -50) {
+        // Swipe up
+        if (currentSectionIndex < sections.length - 1) {
+          scrollToSection(currentSectionIndex + 1);
+        }
+      } else if (deltaY > 50) {
+        // Swipe down
+        if (currentSectionIndex > 0) {
+          scrollToSection(currentSectionIndex - 1);
+        }
+      }
+    };
+
     window.addEventListener('wheel', handleWheel, { passive: true });
     window.addEventListener('keydown', handleKeyDown);
+    window.addEventListener('touchstart', handleTouchStart, { passive: true });
+    window.addEventListener('touchend', handleTouchEnd, { passive: true });
 
     return () => {
       window.removeEventListener('wheel', handleWheel);
       window.removeEventListener('keydown', handleKeyDown);
+      window.removeEventListener('touchstart', handleTouchStart);
+      window.removeEventListener('touchend', handleTouchEnd);
     };
   }, [currentSectionIndex, scrollToSection, sections]);
 
