@@ -1,3 +1,7 @@
-import images from './images';
+import logo from '../assets/logo.png';
+
+const images = {
+  logo
+};
 
 export { images };
