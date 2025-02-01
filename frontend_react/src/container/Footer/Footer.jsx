@@ -27,7 +27,7 @@ const Footer = () => {
   }, []);
 
   if (loading1) {
-    return <div>Loading...</div>;
+    return <div></div>;
   }
 
   const { name, email, message } = formData;
