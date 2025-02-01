@@ -62,10 +62,10 @@
   
   .app__profile-item {
     @media (min-aspect-ratio: 1/1) {
-      width: 10.5vw;
+      width: 9.5vw;
     }
     @media (max-aspect-ratio: 1/1) {
-      width: 10.5vh;
+      width: 9.5vh;
     }
     display: flex;
     justify-content: flex-start;

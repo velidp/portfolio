@@ -49,10 +49,10 @@
     text-align: center;
   
     @media (min-aspect-ratio: 1/1) {
-      margin: 0.9vw;
+      margin: 0 0.9vw 0 0.9vw;
     }
     @media (max-aspect-ratio: 1/1) {
-      margin: 0.9vh;
+      margin: 0.7vh;
     }
   
     transition: all 0.3s ease-in-out;
@@ -113,10 +113,10 @@
       justify-content: center;
 
       @media (min-aspect-ratio: 1/1) {
-        margin-top: 2vw;
+        margin-top: 1vw;
       }
       @media (max-aspect-ratio: 1/1) {
-        margin-top: 2vh;
+        margin-top: 1vh;
         justify-content: center;
         align-items: center;
       }
@@ -166,7 +166,7 @@
         color: var(--gray-color);
 
         @media (min-aspect-ratio: 1/1) {
-          margin-top: 0.5vw;
+         // margin-top: 1.5vw;
         }
         @media (max-aspect-ratio: 1/1) {
           margin-top: 0.5vh;
@@ -177,7 +177,7 @@
 
   .bold-text-period {
     @media (min-aspect-ratio: 1/1) {
-    font-size: 0.9vw;
+    font-size: 0.8vw;
     }
     @media (max-aspect-ratio: 1/1) {
       font-size: 1.3vh;
@@ -233,7 +233,7 @@
 .work-name-text {
 
     @media (min-aspect-ratio: 1/1) {
-      font-size: 1.2vw;
+      font-size: 1.1vw;
       letter-spacing: 0.007vw;
     }
     @media (max-aspect-ratio: 1/1) {
@@ -248,7 +248,7 @@
 
 .head-text-skills {
   @media (min-aspect-ratio: 1/1) {
-    padding-top: 4.27vw;
+    padding-top: 3.1vw;
   }
   @media (max-aspect-ratio: 1/1) {
     padding-top: 4.27vh;
