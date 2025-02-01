@@ -102,14 +102,15 @@
     position: relative; /* Ensure that child elements are positioned relative to this parent */
  
 
-  
     .app__work-item {
-
+      display: flex;
       flex-direction: column;
+      align-items: flex-start; /* Align items to the top */
+      justify-content: flex-start; /* Justify content to the top */
       background-color: var(--gray-color);
       cursor: pointer;
       transition: all 0.3s ease;
-
+    
       @media (min-aspect-ratio: 1/1) {
         width: 14vw;
         margin: 1vw;
@@ -127,9 +128,7 @@
       &:hover {
         transform: scale(1.05);
       }
-  
-      
-  
+    
       @media screen and (max-width: 300px) {
         width: 100%;
         @media (min-aspect-ratio: 1/1) {
@@ -140,6 +139,7 @@
         }
       }
     }
+    
   }
   
   .app__work-img {
