@@ -1,9 +1,18 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Header } from '../container';
 import './VideoBackground.scss'; 
 import YouTube from 'react-youtube';
+import { client } from '../../src/client';
 
 const VideoBackground = () => {
+
+  const [home, setHome] = useState([]);
+
+    useEffect(() => {
+        const query = '*[_type == "home"]';
+        client.fetch(query)
+            .then((data) => setHome(data))
+    }, []);
 
   const opts = {
     height: '100%',
@@ -12,7 +21,7 @@ const VideoBackground = () => {
       autoplay: 1,
       mute: 1,
       loop: 1,
-      playlist: "np7CvKfxjE4",
+      playlist: home[0]?.videoId,
       controls: 0
     },
   };

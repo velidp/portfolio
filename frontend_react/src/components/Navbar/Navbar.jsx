@@ -1,17 +1,36 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { HiMenuAlt4, HiX } from 'react-icons/hi';
 import { motion } from 'framer-motion';
-
-import { images } from '../../constants';
+import { client, urlFor } from '../../client';
 import './Navbar.scss';
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
+  const [loading, setLoading] = useState(true);
+  const [home, setHome] = useState([]);
+
+  useEffect(() => {
+    const query = '*[_type == "home"]';
+    client.fetch(query)
+      .then((data) => {
+        setHome(data);
+        setLoading(false);
+      })
+      .catch((error) => {
+        console.error('Error fetching data:', error);
+        setLoading(false);
+      });
+  }, []);
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
 
   return (
     <nav className='app__navbar'>
       <div className='app__navbar-logo' onClick={() => window.location.hash = '#home'}>
-        <img src={images.logo} alt='logo'></img>
+        <img src={urlFor(home[0]?.logo)} alt={`logo`} />
       </div>
       <ul className='app__navbar-links'>
         {['home', 'about', 'proficiencies','work', 'experience', 'values', 'contact'].map((item) => (

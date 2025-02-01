@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
-import { images } from '../../constants';
+import React, { useState, useEffect } from 'react';
 import { AppWrap, MotionWrap } from '../../wrapper';
-import { client } from '../../client';
+import { client, urlFor } from '../../client';
 import './Footer.scss';
 
 const Footer = () => {
@@ -9,6 +8,27 @@ const Footer = () => {
   const [isFormSubmitted, setIsFormSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
   const [errors, setErrors] = useState({ name: false, email: false, message: false });
+
+  const [loading1, setLoading1] = useState(true);
+
+  const [home, setHome] = useState([]);
+
+  useEffect(() => {
+    const query = '*[_type == "home"]';
+    client.fetch(query)
+      .then((data) => {
+        setHome(data);
+        setLoading1(false);
+      })
+      .catch((error) => {
+        console.error('Error fetching data:', error);
+        setLoading1(false);
+      });
+  }, []);
+
+  if (loading1) {
+    return <div>Loading...</div>;
+  }
 
   const { name, email, message } = formData;
 
@@ -49,7 +69,7 @@ const Footer = () => {
 
       <div className='app__footer-cards'>
         <div className='app__footer-card'>
-          <img src={images.logo} alt="logo"/>
+          <img src={urlFor(home[0]?.logo)} alt={`keyskill`} />
         </div>
 
         {!isFormSubmitted ? 

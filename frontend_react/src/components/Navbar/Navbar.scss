@@ -17,8 +17,7 @@
   cursor: pointer;
 
   img {
-    width: 4.3vw;
-    height: 2.4vw;
+    height: 2.7vw;
   }
 }
 
@@ -156,7 +155,6 @@
 @media screen and (max-width: 900px) {
   .app__navbar-logo {
     img {
-      width: 8.6vw;
       height: 4.8vw;
 
     }
@@ -175,7 +173,6 @@
 @media screen and (max-width: 600px) {
   .app__navbar-logo {
     img {
-      width: 12.9vw;
       height: 7.2vw;
     }
   }

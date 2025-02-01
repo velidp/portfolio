@@ -19,6 +19,11 @@ export default {
             type: 'string'
         },
         {
+            name: 'videoId',
+            title: 'VideoId',
+            type: 'string'
+        },
+        {
             name: 'logo',
             title: 'Logo',
             type: 'image',
