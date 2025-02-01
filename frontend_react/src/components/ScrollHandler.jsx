@@ -63,10 +63,24 @@ const ScrollHandler = ({ sections }) => {
       }
     }, 170);
 
+    const handleKeyDown = (event) => {
+      if (event.key === 'ArrowDown') {
+        if (currentSectionIndex < sections.length - 1) {
+          scrollToSection(currentSectionIndex + 1);
+        }
+      } else if (event.key === 'ArrowUp') {
+        if (currentSectionIndex > 0) {
+          scrollToSection(currentSectionIndex - 1);
+        }
+      }
+    };
+
     window.addEventListener('wheel', handleWheel, { passive: true });
+    window.addEventListener('keydown', handleKeyDown);
 
     return () => {
       window.removeEventListener('wheel', handleWheel);
+      window.removeEventListener('keydown', handleKeyDown);
     };
   }, [currentSectionIndex, scrollToSection, sections]);
 
