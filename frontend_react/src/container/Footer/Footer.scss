@@ -6,7 +6,12 @@
 }
 
 .thanks-text {
-  font-size: 2.1vw;
+  @media (min-aspect-ratio: 1/1) {
+    font-size: 2.1vw;
+  }
+  @media (max-aspect-ratio: 1/1) {
+    font-size: 2.1vh;
+  }
 }
 
 .app__footer-cards {
