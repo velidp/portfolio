@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Tooltip } from 'react-tooltip';
-import 'react-tooltip/dist/react-tooltip.css'
+
 
 import { AppWrap, MotionWrap } from '../../wrapper';
 import { urlFor, client } from '../../client';
@@ -83,15 +82,7 @@ const Skills = () => {
                       <h3 className="work-name-text">{work.name}</h3>
                       <p className="p-text">{work.company}</p>
                     </motion.div>
-                    <Tooltip
-                      id={work.name}
-                      effect='solid'
-                      arrowColor='red'
-                      className='skills-tooltip'
-                    >
-                      {work.desc}
-                    </Tooltip>
-
+                    
                     <div className="app__skills-exp-year">
                       <p className="bold-text-period">{experience.year}</p>
                     </div>
