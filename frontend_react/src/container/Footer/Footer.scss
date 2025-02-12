@@ -38,10 +38,19 @@
   flex-direction: column;
 
   .error {
-    input,
-    textarea {
-      box-shadow: 0 0 0.5vw 0.06vw red;
+    @media (min-aspect-ratio: 1/1) {
+      input,
+      textarea {
+        box-shadow: 0 0 0.5vw 0.06vw red;
+      }
     }
+    @media (max-aspect-ratio: 1/1) {
+      input,
+      textarea {
+        box-shadow: 0 0 0.5vh 0.3vh red;
+      }
+    }
+    
   }
 
   div {
