@@ -149,10 +149,10 @@
       align-items: flex-start;
 
       @media (min-aspect-ratio: 1/1) {
-        margin-bottom: 0.4vw;
+        margin-bottom: 0.3vw;
       }
       @media (max-aspect-ratio: 1/1) {
-        margin-bottom: 0.4vh;
+        margin-bottom: 0.3vh;
         margin-left: 7.5vh
       }
       cursor: pointer;
@@ -233,10 +233,12 @@
 .work-name-text {
 
     @media (min-aspect-ratio: 1/1) {
+      margin-bottom: 0.3vw;
       font-size: 1.1vw;
       letter-spacing: 0.007vw;
     }
     @media (max-aspect-ratio: 1/1) {
+      margin-bottom: 0.3vh;
       font-size: 1.7vh;
       letter-spacing: 0.007vh;
     }
