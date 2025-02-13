@@ -82,10 +82,13 @@
       width: 100%;
     
       @media (min-aspect-ratio: 1/1) {
-        height: 10.5vw; 
+        height: 9.5vw; 
+        width: 9.5vw; 
       }
       @media (max-aspect-ratio: 1/1) {
-        height: 10.5vh; 
+        height: 9.5vh; 
+        width: 9.5vh; 
+
       }
       border-radius: 21%;
       object-fit: cover;
