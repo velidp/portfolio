@@ -12,6 +12,7 @@ const Work = () => {
   const [activeFilter, setActiveFilter] = useState('All');
   const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 });
   const [works, setWorks] = useState([]);
+  const [tags, setTags] = useState([]);
   const [filterWork, setFilterWork] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -21,6 +22,14 @@ const Work = () => {
     client.fetch(query).then((data) => {
       setWorks(data);
       setFilterWork(data);
+    })
+  }, [])
+
+  useEffect(() => {
+    const query = '*[_type == "tag"]';
+
+    client.fetch(query).then((data) => {
+      setTags(data);
     })
   }, [])
 
@@ -34,17 +43,17 @@ const Work = () => {
   }
   
 
-  const handleWorkFilter = (item) => {
-    setActiveFilter(item);
+  const handleWorkFilter = (tag) => {
+    setActiveFilter(tag);
     setAnimateCard([{ y: 100, opacity: 0 }]);
 
     setTimeout(() => {
       setAnimateCard([{ y: 0, opacity: 1 }]);
 
-      if(item === 'All') {
+      if(tag === 'All') {
         setFilterWork(works);
       } else {
-        setFilterWork(works.filter((work) => work.tags.includes(item)));
+        setFilterWork(works.filter((work) => work.tags.includes(tag)));
       }
     }, 500);
   }
@@ -57,13 +66,13 @@ const Work = () => {
       </h2>
 
       <div className='app__work-filter'>
-        {['UI/UX', 'Web App', 'Mobile App', 'React JS', 'All'].map((item, index) => (
+        {tags.map((tag, index) => (
           <div
             key={index}
-            onClick={() => handleWorkFilter(item)}
-            className={`app__work-filter-item app__flex p-text ${activeFilter === item ? 'item-active' : ''}`}
+            onClick={() => handleWorkFilter(tag.tagName)}
+            className={`app__work-filter-item app__flex p-text ${activeFilter === tag ? 'item-active' : ''}`}
           >
-            {item}
+            {tag.tagName}
           </div>
         ))}
       </div>
