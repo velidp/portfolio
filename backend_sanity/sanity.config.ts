@@ -5,9 +5,9 @@ import {schemaTypes} from './schemaTypes'
 
 export default defineConfig({
   name: 'default',
-  title: 'portfolio',
+  title: 'adel-portfolio',
 
-  projectId: 'zia0xmlf',
+  projectId: 'wc8rigkg',
   dataset: 'production',
 
   plugins: [structureTool(), visionTool()],

@@ -62,7 +62,7 @@ const Work = () => {
   return (
     <>
       <h2 className='head-text head-text-work'>
-        <span>My </span> Innovation <span> Hub </span>
+        <span>My </span> Visionary <span> Space </span>
       </h2>
 
       <div className='app__work-filter'>

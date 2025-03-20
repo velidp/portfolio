@@ -20,7 +20,7 @@ const About = () => {
   return (
     <>
       <h2 className='head-text head-text-about'>
-        <span>Fusion of </span>Engineering <span>and </span>Creativity
+        <span>The Intersection Of </span>Quality <span>and </span>Ingenuity
       </h2>
 
       <div className='app__profiles'>
