@@ -11,11 +11,6 @@ export default {
                 name:'company',
                 title:'Company',
                 type:'string'
-            },
-            {
-                name:'desc',
-                title:'Desc',
-                type:'string'
             }
     ]
 }

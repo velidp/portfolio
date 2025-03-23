@@ -83,7 +83,7 @@
     border-radius: 50%;
     background-color: var(--primary-color);
     
-    border: 2.5px solid var(--secondary-color);
+    border: 2.5px solid var(--primary-color);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -104,7 +104,7 @@
 
     &:hover {
       background-color: var(--black-color);
-      border-color: var(--secondary-color);
+      border-color: var(--black-color);
 
       svg {
         color: var(--gray-color);
